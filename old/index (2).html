@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SIGMA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='logo.png' style="width: 32px;height: 32px;" rel='shortcut icon'>
+
+</head>
+
+<body style="background: #263238">
+    <header style="background: #008975" id="section-1">
+        <img src="img/sigma.png" style="width: 200px; height: 40px;">
+    </header>
+    
+    <nav id="navigation-menu">
+        <ul style="background: #008975">
+            <li><a href="#section-1">Home</a></li>
+            <li><a href="#section-2">Features</a></li>
+            <li><a href="#section-3">About</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            
+        </ul>
+    </nav>
+    
+    <div id="content">
+        <section id="section-1">            
+            <div class="content">
+
+                <h3 style="text-align: center">Sistem Informasi Geografis Pemetaan Pemasaran Al-Qodiri 
+                </h3>
+                <h3 style="text-align: center">Perusahaan Air Minum Al-Qodiri 
+                </h3>
+                    <img src="img/botol.png" style="  width: 45%; height: 30%px; margin-left: 29%; margin-top: 30 px;">
+                </div>
+
+        </section>
+        <section id="section-2">
+            <div class="content">
+                <div style="background: #008975" id="atasbg"> Features</div>
+                <div style="background: #008975" id="bawahbg"></div>
+                <div id="tengahbg">
+                    <div id="kotakin1" class="kotakin">
+                        <div id="hkotak">
+                            <img src="img/maps.png" />
+                            <div style="text-align: center" class="ket">
+                            <b>Pemetaan</b><br />
+                            Menampilkan pemetaan pemasaran produk al-qodiri di Jember 
+                            </div>
+                        </div>
+                        <div id="ikotak"><center>Pemetaan</center></div>
+                    </div>
+                    <div id="kotakin2" class="kotakin">
+                        <div id="hkotak">
+                            <img src="img/recom.png" />
+                            <div style="text-align: center" class="ket">
+                            <b>Rekomendasi</b><br />
+                            Menampilkan rekomendasi pendistribusian 3 produk al-qodiri
+                            </div>
+                            </div>
+                        <div id="ikotak"><center>Rekomendasi</center></div>
+                    </div>
+                    <div id="kotakin3" class="kotakin">
+                        <div id="hkotak">
+                            <img src="img/grafik.png" />
+                            <div style="text-align: center" class="ket">
+                            <b>Grafik</b><br />
+                            Menampilkan grafik penjualan 3 produk al-qodiri berdasarkan kecamatan
+                            </div>
+                            </div><div id="ikotak"><center>Grafik</center></div>
+                    </div>
+
+                </div>          
+            </div>
+        </section>
+        <section id="section-3">
+            <div class="content">
+                <div id="atasbg1"><img src="img/about.png" style="width: 80%; margin-left: 10%;"></div>
+                
+            </div>
+        </section>
+<footer style="background: #008975">Copyright &copy; TRPL 2017 | SIGMA PSSI</footer>
+</div>
+    
+
+    
+    <!-- Google CDN jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <!-- Page Scroll plugin -->
+    <script src="jquery.PageScroll2id.js"></script>
+    
+    <script>
+        (function($){
+            $(window).load(function(){
+                $("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+                    highlightSelector:"#navigation-menu a"
+                });
+                                
+                $("a[rel='next']").click(function(e){
+                    e.preventDefault();
+                    var to=$(this).parent().parent("section").next().attr("id");
+                    $.mPageScroll2id("scrollTo",to);
+                });             
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

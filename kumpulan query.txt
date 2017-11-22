@@ -1,0 +1,77 @@
+Data Kecamatan
+INSERT INTO kecamatan('Kecamatan')
+VALUES ('Ajung'), ('Ambulu'), ('Arjasa'), ('Balung'), ('Bangsalsari'), ('Gumukmas'), ('Jelbuk'), ('Jenggawah'), ('Jombang'), ('Kalisat'), ('Kaliwates'), ('Kencong'), ('Ledokombo'), ('Mayang'), ('Mumbulsari'), ('Pakusari'), ('Panti'), ('Patrang'), ('Puger'), ('Rambipuji'), ('Semboro'), ('Silo'),('Sukorambi'), ('Sukowono'), ('Sumberbaru'), ('Sumberjambe'), ('Sumbersari'), ('Tanggul'), ('Tempurejo'), ('Umbulsari'), ('Wuluhan');
+
+>Home
+-data diri agen
+SELECT agen.IDAgen, agen.NamaAgen FROM agen JOIN login ON agen.IDLOgin = login.IDLogin WHERE login.username = '$username'
+-data diri manajer
+SELECT manajer.IDManajer, manajer.Nama FROM manajer JOIN login ON manajer.IDLOgin = login.IDLogin WHERE login.username = '$username'
+-jumlah toko
+SELECT COUNT(*) as jumlah FROM toko
+-hitung per produk
+SELECT SUM(200ml_Diterima) as d200, SUM(600ml_Diterima) as d600, SUM(1500ml_Diterima) as d1500 FROM stok WHERE MONTH(TanggalDiterima) = MONTH(NOW());
+SELECT SUM(200ml_Terjual) as d200, SUM(600ml_Terjual) as d600, SUM(1500ml_Terjual) as d1500 FROM stok WHERE MONTH(TanggalTerjual) = MONTH(NOW());
+
+>Laporan
+-baca data terdistribusi pada kecamatan x per tahun
+SELECT COUNT(s.200ml_terjual) as p200, COUNT(s.600ml_terjual) as p600, COUNT(s.1500ml_terjual) as p1500, MONTH(s.TanggalTerjual) as bulan FROM stok s JOIN toko t ON t.IDToko = s.IDToko WHERE t.IDKecamatan = :kecamatan AND YEAR(s.TanggalTerjual) = YEAR(NOW()) GROUP BY s.TanggalTerjual;
+-baca data terjual pada kecamatan x per tahun
+SELECT COUNT(s.200ml_diterima) as p200, COUNT(s.600ml_diterima) as p600, COUNT(s.1500ml_diterima) as p1500, MONTH(s.TanggalDiterima) as bulan FROM stok s JOIN toko t ON t.IDToko = s.IDToko WHERE t.IDKecamatan = :kecamatan AND YEAR(s.TanggalTerjual) = YEAR(NOW()) GROUP BY s.TanggalDiterima;
+
+
+
+>Login
+-login agen
+SELECT * FROM login WHERE Username= :username AND Password= :password
+-login manajer
+SELECT username FROM user WHERE username= :username
+
+>Pemetaan
+-baca list toko untuk pin di peta
+SELECT toko.IDToko, toko.NamaToko, toko.AlamatToko, maptoko.Latitude, maptoko.Longitude FROM toko JOIN maptoko ON maptoko.IDToko = toko.IDToko
+
+-tambah toko
+INSERT INTO toko(NamaToko, NamaPemilik, AlamatToko, IDKecamatan, NoTelp, Keterangan, IDAgen) VALUES ('$NamaToko', '$NamaPemilik', $AlamatToko, $IDKecamatan, '$NoTelp', '$Keterangan', $IDAgen)
+
+-tambah lokasi
+INSERT INTO maptoko(Latitude, Longitude, IDToko) VALUES ('$Lat', '$Long', '$IDToko')
+
+-lihat detail toko
+SELECT maptoko.IDMap, maptoko.Latitude, maptoko.Longitude, toko.IDToko, toko.NamaToko, toko.NamaPemilik, toko.AlamatToko, toko.NoTelp, toko.Keterangan FROM toko JOIN maptoko ON maptoko.IDToko = toko.IDToko
+
+-update toko
+UPDATE toko SET NamaToko=:namatoko, NamaPemilik=:pemilik, AlamatToko=:alamat, NoTelp=:noTelp, Keterangan=:keterangan, StatusToko=:status WHERE IDToko=:idtoko
+
+-ambil data kecamatan (untuk dropdown pilih kecamatan)
+SELECT IDKecamatan, Kecamatan FROM kecamatan;
+
+>Penjualan
+-tambah produk
+INSERT INTO stok(200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, TanggalDiterima, IDToko) VALUES (:_200ml, :_600ml, :_1500ml, :tanggal, :idtoko)
+
+-update produk
+UPDATE stok SET 200ml_Terjual=:_200ml, 600ml_Terjual=:_600ml, 1500ml_Terjual=:_1500ml, TanggalTerjual=:tanggal WHERE IDStok = :idstok AND IDToko = :idtoko
+
+-lihat list produk per bulan pada toko
+SELECT IDStok, 200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, 200ml_Terjual, 600ml_Terjual, 1500ml_Terjual, TanggalDiterima, TanggalTerjual, IDToko FROM stok WHERE MONTH(TanggalDiterima) = MONTH(NOW());
+
+-lihat list kecamatan yg ada tokonya (yg menjual produk al qodiri)
+SELECT DISTINCT Kecamatan FROM kecamatan k JOIN toko t ON t.IDKecamatan = k.IDKecamatan ORDER BY Kecamatan
+-lihat list toko per kecamatan
+SELECT IDToko, NamaToko, NamaPemilik, AlamatToko, Kecamatan, NoTelp, Keterangan, StatusToko, IDAgen FROM toko t JOIN kecamatan k ON k.IDKecamatan = t.IDKecamatan WHERE Kecamatan = :kecamatan
+
+
+
+>Profil
+-profil agen
+SELECT k.IDAgen, k.NamaAgen, k.JenisKelamin, k.TanggalLahir, k.Alamat, kk.Kecamatan, k.NoTelp, l.IDLogin, l.Username, l.Password FROM agen k JOIN login l ON l.IDLogin = k.IDLogin JOIN kecamatan kk ON k.Kecamatan = kk.IDKecamatan
+-update profil
+UPDATE agen SET NamaAgen = :nama, JenisKelamin = :jk, TanggalLahir = :tgl, Alamat = :alamat, NoTelp = :notelp; WHERE IDAgen = :idagen
+UPDATE login SET Username = :user, Password = :pass WHERE IDLogin = :idlogin
+
+-profil manajer
+SELECT m.IDManajer, m.Nama, m.JenisKelamin, m.TanggalLahir, m.NoTelp, l.IDLogin, l.Username, l.Password FROM manajer m JOIN login l ON l.IDLogin = m.IDLogin;
+-update profil
+UPDATE manajer SET Nama = :nama, JenisKelamin = :jk, TanggalLahir = :tgl, NoTelp = :notelp WHERE IDManajer = :idmanajer;
+UPDATE login SET Username = :user, Password = :pass WHERE IDLogin = :idlogin

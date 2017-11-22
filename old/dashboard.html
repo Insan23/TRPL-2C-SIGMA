@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Dashboard</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=10">
+  <link rel="stylesheet" href="css/styleku.css">
+  <link href='logo.png' style="width: 32px;height: 32px;" rel='shortcut icon'>
+
+<script src="maps.js"></script>
+<script type="text/javascript">
+var peta;
+function peta_awal(){
+    // definisikan koordinat awal untuk peta
+        var awal = new google.maps.LatLng(-8.168656, 113.702167); 
+       // peta option, berupa setting bagaimana peta itu akan muncul
+       var petaoption = {zoom: 12,center: awal,mapTypeId: google.maps.MapTypeId.ROADMAP}; 
+      // menuliskan koordinat peta dan memunculkannya ke halaman web
+      peta = new google.maps.Map(document.getElementById("map_canvas"),petaoption);
+      // marker 
+      tanda = new google.maps.Marker({position: awal, map: peta });}
+</script>
+
+</head>
+<body onload="peta_awal()">
+<div class="atas" >
+
+      <div id="logopojok">
+      <img src="img/man.png">
+    </div>
+    <div id="cari">
+      <input type="text" name="cari"  value="" style="background: #008975" >
+    </div>
+
+<div class="all">
+  <div id="kiri">
+    <div id="logo">
+      <img src="img/man.png">
+    </div>
+    <div id="profil">
+      <div id="hprofil">
+        Profil
+      </div>
+      <div id="iprofil">
+        <p><b>Ari S</b></p>
+        <p>Manager Pemasaran</p>
+      </div>
+    </div>
+    <div id="halaman">
+      <div id="hlaman">
+        Dashboard
+      </div>
+      <div id="ilaman">
+        <div class="btn-group">
+         <button class="button"><img src="img/pemetakan.png">Pemetaan</button>
+         <button class="button"><img src="img/penjualan.png">Penjualan</button>
+         <button class="button"><img src="img/laporan.png">Laporan</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div id="tengahim" >
+    <div id="map_canvas" style="width:100%; height:50%">
+      
+    </div>
+    
+    
+      
+    </div>
+  </div>
+</div>
+
+</body>
+</html> 
