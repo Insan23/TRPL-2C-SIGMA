@@ -31,7 +31,40 @@
     </section>
     <section class="content container-fluid">
         <!-- awal konten -->
-
+        <?php
+        echo "<div class='box box-default'>";
+        echo "<div class='box-body'>";
+        if (isset($toko)) {
+            foreach ($toko as $item) {
+                $Diterima200 = $item['Diterima200'];
+                $Diterima600 = $item['Diterima600'];
+                $Diterima1500 = $item['Diterima1500'];
+                $Terjual200 = $item['Terjual200'];
+                $Terjual600 = $item['Terjual600'];
+                $Terjual1500 = $item['Terjual1500'];
+                $Terima = $item['TanggalDiterima'];
+                $Terjual = $item['TanggalTerjual'];
+                $sisa200 = $Diterima200 - $Terjual200;
+                $sisa600 = $Diterima600 - $Terjual600;
+                $sisa1500 = $Diterima1500 - $Terjual1500;
+                echo "<table class='table table-bordered table-hover'>";
+                echo "<thead>";
+                echo "<tr><td>Produk</td><td>Barang Masuk</td><td>Tanggal Tambah</td><td>Barang Terjual</td><td>Tanggal Keluar</td><td>Sisa Produk</td></tr>";
+                echo "</thead>";
+                echo "<tbody>";
+                echo "<tr><td>200ml</td><td>$Diterima200</td><td>$Terima</td><td>$Terjual200</td><td>$Terjual</td><td>$sisa200</td></tr>";
+                echo "<tr><td>200ml</td><td>$Diterima600</td><td>$Terima</td><td>$Terjual600</td><td>$Terjual</td><td>$sisa600</td></tr>";
+                echo "<tr><td>200ml</td><td>$Diterima1500</td><td>$Terima</td><td>$Terjual1500</td><td>$Terjual</td><td>$sisa1500</td></tr>";
+                echo "</tbody>";
+                echo "</table>";
+            }
+        } else {
+            echo "<div class='box-header'>Tidak Ada Data</div></div<";
+        }
+        echo "</div><div class='box-footer'>";
+        echo "";
+        echo "</div></div>";
+        ?>
         <!--akhir kontent-->
         <?php require_once('main/element/modals.php'); ?>
 </div>

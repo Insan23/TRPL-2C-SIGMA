@@ -10,10 +10,12 @@ class ControlPenjualan {
 
     public function koAgenPenjualan() {
         $kecamatan = Penjualan::lihatTokoPadaKec();
+        $toko = Penjualan::lihatTokoPerKec();
         require_once ('main/pages/ko_agen-dashboard-penjualan.php');
     }
 
     public function koAgenPenjualanToko() {
+        $toko = Penjualan::lihatProdukPerBulan($_GET['IDToko']);
         require_once ('main/pages/ko_agen-dashboard-penjualan_toko.php');
     }
 

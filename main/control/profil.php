@@ -10,14 +10,14 @@ class ControlProfil
 {
     public function koAgenProfil()
     {
-        $dataDiri = Profil::profilAgen();
+        $dataDiri = Profil::profilAgen($_SESSION['ID']);
         $kecamatan = Pemetaan::dataKecamatan();
         require_once('main/pages/ko_agen-profil.php');
     }
 
     public function manajerProfil()
     {
-        $dataDiri = Profil::profilManager();
+        $dataDiri = Profil::profilManager($_SESSION['ID']);
         require_once('main/pages/manajer-profil.php');
     }
 
@@ -38,7 +38,7 @@ class ControlProfil
 
     public function ubahManajer()
     {
-        Profil::ubahDataManajer();
+        Profil::ubahDataManajer($_GET['Nama'], $_GET['JenisKelamin'], $_GET['TanggalLahir'], $_GET['NoTelp'], $_GET['Username'], $_GET['Password']);
         require_once ('main/pages/manajer-profil');
     }
 }

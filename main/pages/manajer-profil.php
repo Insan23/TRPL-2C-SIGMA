@@ -31,7 +31,9 @@
     </section>
     <section class="content container-fluid">
         <!-- awal konten -->
-        <form action="" role="form">
+        <form method="get">
+            <input type="hidden" name="controller" value="profil">
+            <input type="hidden" name="action" value="ubahManajer">
             <div class="row">
                 <div class="col-md-4">
                     <div class="box box-primary">
@@ -46,7 +48,7 @@
                             <p class="text-muted text-center">Manajer</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div >
                         <div class="box box-success">
                             <div class="box-body">
                                 <div class="form-group">
@@ -75,14 +77,22 @@
                                        placeholder="Nama Lengkap..." value="<?php echo $dataDiri['Nama']; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="JenisKelamin">Jenis Kelamin</label>
-                                <div class="radio" id="JenisKelamin">
-                                    <label><input type="radio" name="JenisKelamin">Laki-Laki</label>
+                                <label>Jenis Kelamin</label>
+                                <div class="radio" id="jk">
+                                    <label><input type="radio" name="JenisKelamin" id="laki">Laki-Laki</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="JenisKelamin">Perempuan</label>
+                                    <label><input type="radio" name="JenisKelamin" id="perem">Perempuan</label>
                                 </div>
                             </div>
+                            <script type="text/javascript">
+                                var jk = <?php $l = $dataDiri['JenisKelamin'];echo "\"$l\";\n";?>
+                                if (jk == "Laki-Laki") {
+                                    document.getElementById("laki").checked="true";
+                                } else {
+                                    document.getElementById("perem").checked="true";
+                                }
+                            </script>
                             <div class="form-group">
                                 <label for="datepicker">Tanggal Lahir</label>
                                 <div class="input-group date">
@@ -95,25 +105,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="nomor-telepon">Nomor Telepon</label>
+                                <label for="NoTelp">Nomor Telepon</label>
                                 <input type="text" class="form-control" id="nomor-telepon"
                                        placeholder="Nomor Telepon..." value="<?php echo $dataDiri['NoTelp'] ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="Alamat">Alamat</label>
-                                <input type="text" class="form-control" id="Alamat"
-                                       placeholder="Alamat..." value="<?php echo $dataDiri['Alamat']; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="Kecamatan">Kecamatan</label>
-                                <select name="Kecamatan" id="Kecamatan" class="form-control">
-                                    <option value="none" selected>Pilih Kecamatan...</option>
-                                    <?php
-                                    foreach ($kecamatan as $item) {
-                                        echo "<option value=\"$item[0]\">$item[1]</option>";
-                                    }
-                                    ?>
-                                </select>
                             </div>
                         </div>
                         <div class="box-footer">

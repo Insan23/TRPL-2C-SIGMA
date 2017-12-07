@@ -31,7 +31,28 @@
     </section>
     <section class="content container-fluid">
         <!-- awal konten -->
-
+        <?php
+        foreach ($kecamatan as $kec) {
+            $namaKec = $kec['Kecamatan'];
+            echo "<div class='box box-primary'>";
+            echo "<div class='box-header'><h3>$namaKec</h3></div>";
+            echo "<div class='box-body'>";
+            echo "<table class='table table-bordered table-hover'>";
+            foreach ($toko as $tok) {
+                $namaTok = $tok['NamaToko'];
+                $IDTok = $tok['IDToko'];
+                if ($tok['Kecamatan'] == $namaKec) {
+                    echo "<tr><td>";
+                    echo "<div class='col-md-12'>";
+                    echo "<a class='btn btn-default btn-flat' type='button' href='?controller=penjualan&action=koAgenPenjualanToko&IDToko=$IDTok'>$namaTok</a>";
+                    echo "</div>";
+                    echo "</td></tr>";
+                }
+            }
+            echo "</table>";
+            echo "</div></div>";
+        }
+        ?>
         <!--akhir kontent-->
         <?php require_once('main/element/modals.php'); ?>
 </div>

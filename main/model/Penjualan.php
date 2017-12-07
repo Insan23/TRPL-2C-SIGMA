@@ -30,14 +30,18 @@ class Penjualan
     public static function lihatProdukPerBulan()
     {
         $db = DB::getInstance();
-        $req = $db->query("SELECT IDStok, 200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, 200ml_Terjual, 600ml_Terjual, 1500ml_Terjual, TanggalDiterima, TanggalTerjual, IDToko FROM stok WHERE MONTH(TanggalDiterima) = MONTH(NOW());");
+        $req = $db->query("SELECT IDStok, 200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, 200ml_Terjual, 600ml_Terjual, 1500ml_Terjual, TanggalDiterima, TanggalTerjual, IDToko FROM stok WHERE YEAR(TanggalDiterima) = YEAR(NOW());");
         foreach ($req as $item) {
             $list[] = array(
                 'IDStok' => $item['IDStok'],
                 'Diterima200' => $item['200ml_Diterima'],
                 'Diterima600' => $item['600ml_Diterima'],
                 'Diterima1500' => $item['1500ml_Diterima'],
+                'Terjual200' => $item['200ml_Terjual'],
+                'Terjual600' => $item['600ml_Terjual'],
+                'Terjual1500' => $item['1500ml_Terjual'],
                 'TanggalDiterima' => $item['TanggalDiterima'],
+                'TanggalTerjual' => $item['TanggalTerjual'],
                 'IDToko' => $item['IDToko']
             );
             return $list;
@@ -52,26 +56,24 @@ class Penjualan
             $list[] = array(
                 'Kecamatan' => $item['Kecamatan']
             );
-            return $list;
         }
+        return $list;
     }
 
-    public static function lihatTokoPerKec($kecamatan)
+    public static function lihatTokoPerKec()
     {
         $db = DB::getInstance();
-        $req = $db->query("SELECT IDToko, NamaToko, NamaPemilik, AlamatToko, Kecamatan, NoTelp, Keterangan FROM toko t JOIN kecamatan k ON k.IDKecamatan = t.IDKecamatan WHERE Kecamatan = '$kecamatan'");
+        $req = $db->query("SELECT t.IDToko, t.NamaToko, t.NamaPemilik, t.AlamatToko, t.IDKecamatan, k.Kecamatan, t.NoTelp, t.Keterangan FROM toko t JOIN kecamatan k ON k.IDKecamatan = t.IDKecamatan ORDER BY t.IDKecamatan");
         foreach ($req as $item) {
             $list[] = array(
                 'IDToko' => $item['IDToko'],
-                'NamaToko' > $item['NamaToko'],
-                'NamaPemilik' => $item['NamaPemilik'],
+                'NamaToko' => $item['NamaToko'],
                 'AlamatToko' => $item['AlamatToko'],
                 'Kecamatan' => $item['Kecamatan'],
-                'NoTelp' => $item['NoTelp'],
-                'Keterangan' => $item['Keterangan'],
+                'Keterangan' => $item['Keterangan']
             );
-            return $list;
         }
+        return $list;
     }
 }
 
