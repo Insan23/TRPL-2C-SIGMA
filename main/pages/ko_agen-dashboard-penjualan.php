@@ -44,7 +44,7 @@
                 if ($tok['Kecamatan'] == $namaKec) {
                     echo "<tr><td>";
                     echo "<div class='col-md-12'>";
-                    echo "<a class='btn btn-default btn-flat' type='button' href='?controller=penjualan&action=koAgenPenjualanToko&IDToko=$IDTok'>$namaTok</a>";
+                    echo "<a class='btn btn-default btn-block btn-flat' type='button' href='?controller=penjualan&action=koAgenPenjualanToko&IDToko=$IDTok'>$namaTok</a>";
                     echo "</div>";
                     echo "</td></tr>";
                 }

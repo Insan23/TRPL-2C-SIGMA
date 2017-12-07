@@ -51,7 +51,7 @@ class Penjualan
     public static function lihatTokoPadaKec()
     {
         $db = DB::getInstance();
-        $req = $db->query("SELECT DISTINCT Kecamatan FROM kecamatan k JOIN toko t ON t.IDKecamatan = k.IDKecamatan ORDER BY Kecamatan");
+        $req = $db->query("SELECT DISTINCT Kecamatan FROM kecamatan k JOIN toko t ON t.IDKecamatan = k.IDKecamatan WHERE t.StatusToko = 'Ada' ORDER BY Kecamatan");
         foreach ($req as $item) {
             $list[] = array(
                 'Kecamatan' => $item['Kecamatan']

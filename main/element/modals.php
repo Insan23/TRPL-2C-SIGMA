@@ -76,6 +76,7 @@
                                     echo "<option value='$id'>$kec</option>";
                                 }
                             } else {
+
                             }
                             ?>
                         </select>
@@ -103,6 +104,7 @@
             <form method="get">
                 <input type="hidden" name="controller" value="penjualan">
                 <input type="hidden" name="action" value="updateProduk">
+                <input type="hidden" name="IDToko" id="IDToko">
                 <div class="modal-header">
                     <h4 class="modal-title">Update Produk</h4>
                 </div>
@@ -252,7 +254,7 @@
     <form method="get">
         <input type="hidden" name="controller" value="pemetaan">
         <input type="hidden" name="action" value="hapusToko">
-        <input type="hidden" name="IDTokoHapus">
+        <input type="hidden" name="IDTokoHapus" id="IDTokoHapus">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form action="logout.php">
@@ -279,7 +281,7 @@
             <form method="get">
                 <input type="hidden" name="controller" value="pemetaan">
                 <input type="hidden" name="action" value="ubahToko">
-                <input type="hidden" name="IDTokoUbah" value="">
+                <input type="hidden" name="IDTokoUbah" id="IDTokoUbah">
                 <div class="modal-header">
                     <h4 class="modal-title">Ubah Data Toko</h4>
                 </div>
@@ -288,7 +290,8 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="LatUbah">Lintang</label>
-                                <input type="text" name="LatUbah" class="form-control" placeholder="Lintang" id="LatUbah" value="">
+                                <input type="text" name="LatUbah" class="form-control" placeholder="Lintang"
+                                       id="LatUbah" value="">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -316,7 +319,8 @@
                     </div>
                     <div class="form-group">
                         <label for="AlamatUbah">Alamat</label>
-                        <input type="text" name="AlamatUbah" class="form-control" placeholder="Jl ..." id="AlamatUbah" value="">
+                        <input type="text" name="AlamatUbah" class="form-control" placeholder="Jl ..." id="AlamatUbah"
+                               value="">
                     </div>
                     <div class="form-group">
                         <label for="IDKecamatanUbah">Kecamatan</label>
@@ -336,7 +340,8 @@
                     </div>
                     <div class="form-group">
                         <label for="KeteranganUbah">Keterangan</label>
-                        <textarea name="KeteranganUbah" class="form-control" id="KeteranganUbah" rows="5" value=""></textarea>
+                        <textarea name="KeteranganUbah" class="form-control" id="KeteranganUbah" rows="5"
+                                  value=""></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -349,6 +354,13 @@
         </div>
     </div>
 </div>
-
+<script type="text/javascript">
+    $(function () {
+        $('#datepicker').datepicker({
+            autoclose: true,
+            format: 'yyy/mm/dd'
+        })
+    });
+</script>
 </section>
 </div>

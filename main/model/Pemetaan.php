@@ -30,7 +30,11 @@ class Pemetaan
                 'Long' => $item['Longitude'],
             );
         }
-        return $list;
+        if (isset($list)) {
+            return $list;
+        } else {
+            return null;
+        }
     }
 
     public static function bacaDetailToko($IDToko)
@@ -55,9 +59,7 @@ class Pemetaan
     public static function tambahToko($NamaToko, $NamaPemilik, $Alamat, $IDKecamatan, $NoTelp, $Keterangan, $IDAgen, $Lat, $Long)
     {
         $db = DB::getInstance();
-        $query = "INSERT INTO toko(NamaToko, NamaPemilik, AlamatToko, IDKecamatan, NoTelp, Keterangan, StatusToko, IDAgen) VALUES ('$NamaToko', '$NamaPemilik', '$Alamat', $IDKecamatan, '$NoTelp', '$Keterangan', 'Ada', $IDAgen);";
-        $ins = $db->query($query);
-        print_r($query);
+        $ins = $db->query("INSERT INTO toko(NamaToko, NamaPemilik, AlamatToko, IDKecamatan, NoTelp, Keterangan, StatusToko, IDAgen) VALUES ('$NamaToko', '$NamaPemilik', '$Alamat', $IDKecamatan, '$NoTelp', '$Keterangan', 'Ada', $IDAgen);");
         $IDToko = $db->query("SELECT IDToko FROM toko WHERE NamaToko='$NamaToko' AND NamaPemilik='$NamaPemilik';");
         $ID;
         foreach ($IDToko as $item) {

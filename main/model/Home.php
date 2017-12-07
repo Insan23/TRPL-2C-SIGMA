@@ -45,7 +45,7 @@ class Home
     public static function HitungJumlahToko()
     {
         $db = DB::getInstance();
-        $req = $db->query("SELECT COUNT(*) as jumlah FROM toko");
+        $req = $db->query("SELECT COUNT(*) as jumlah FROM toko WHERE StatusToko = 'Ada'");
         foreach ($req as $item) {
             $hasil[] = $item['jumlah'];
         }

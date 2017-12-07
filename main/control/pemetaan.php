@@ -44,7 +44,8 @@ class ControlPemetaan
         $_SESSION['ID'] = "";
         $_GET['Lat'] = "";
         $_GET['Long'] = "";
-        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
+//        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
+        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
     }
 
     public function ubahToko()
@@ -59,7 +60,8 @@ class ControlPemetaan
             $_GET['Lat'],
             $_GET['Long']
         );
-        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
+//        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
+        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
     }
 
     public function detailToko()
@@ -69,8 +71,8 @@ class ControlPemetaan
 
     public function hapusToko()
     {
-        Pemetaan::hapusToko($_GET['IDToko']);
-        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
+        Pemetaan::hapusToko($_GET['IDTokoHapus']);
+        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
     }
 
 }
