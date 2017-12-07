@@ -33,7 +33,7 @@ class ControlProfil
             $_GET['Username'],
             $_GET['Password']
         );
-        require_once ('main/pages/ko_agen-profil');
+        header("location: index.php?controller=profil=koAgenProfil");
     }
 
     public function ubahManajer()

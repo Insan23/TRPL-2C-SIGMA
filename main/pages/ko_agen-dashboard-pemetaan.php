@@ -138,6 +138,13 @@
                 echo "document.getElementById('AlamatUbah').value = \"$AlamatToko_\";\n";
                 echo "document.getElementById('IDKecamatanUbah').value = $IDKecamatan_;\n";
                 echo "document.getElementById('KeteranganUbah').value = \"$Keterangan_\";\n";
+
+                /**
+                 * untuk tambah & update produk
+                 */
+                echo "document.getElementById('IDTokoUpdate').value= $ID_;";
+                echo "document.getElementById('IDTokoTambah').value= $ID_;";
+
                 echo "});\n";
                 $i++;
             }
@@ -148,19 +155,6 @@
 
         google.maps.event.addListener(map, 'click', function (event) {
             placeMarker(event.latLng);
-//            var lata = event.lat();
-//            var longa = event.lng();
-//            if (marker) {
-//                marker.setPosition(event.latLng);
-//            } else {
-//                marker = new google.maps.Marker({
-//                    position: event.latLng,
-//                    map: map
-//                });
-//            }
-//            windowTambah.open(map, marker);
-//            document.getElementById('Lat').value = lata;
-//            document.getElementById("Long").value = longa;
         });
 
         function placeMarker(location) {

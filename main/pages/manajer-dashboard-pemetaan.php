@@ -31,7 +31,25 @@
     </section>
     <section class="content container-fluid">
         <!-- awal konten -->
+        <div class="box box-primary box-solid bg-gray-light">
+            <div class="box-body">
+                <div id="peta" style="height: 430px; width: 100%;">
+                </div>
+
+            </div>
+        </div>
+
         <script type="text/javascript">
+            /**
+             * lokasi jember
+             * lat: -8.169187, lng: 113.702040
+             * zoom: 11
+             *
+             */
+            var marker;
+            var windowTambah;
+            var kontenTambah = "<button type='button' class='btn btn-default btn-flat' data-toggle='modal' data-target='#modal-input-toko'>Tambah Lokasi Toko</button>";
+
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('peta'), {
                     center: {lat: -8.169187, lng: 113.702040},
@@ -46,31 +64,32 @@
 
                 <?php
                 $i = 0;
-                foreach ($peta as $item) {
-                    $ID_ = $item['ID'];
-                    $NamaToko_ = $item['NamaToko'];
-                    $NamaPemilik_ = $item['NamaPemilik'];
-                    $AlamatToko_ = $item['AlamatToko'];
-                    $IDKecamatan_ = $item['IDKecamatan'];
-                    $Kecamatan_ = $item['Kecamatan'];
-                    $NoTelp_ = $item['NoTelp'];
-                    $Keterangan_ = $item['Keterangan'];
-                    $Lat_ = $item['Lat'];
-                    $Long_ = $item['Long'];
+                if (isset($peta)) {
+                    foreach ($peta as $item) {
+                        $ID_ = $item['ID'];
+                        $NamaToko_ = $item['NamaToko'];
+                        $NamaPemilik_ = $item['NamaPemilik'];
+                        $AlamatToko_ = $item['AlamatToko'];
+                        $IDKecamatan_ = $item['IDKecamatan'];
+                        $Kecamatan_ = $item['Kecamatan'];
+                        $NoTelp_ = $item['NoTelp'];
+                        $Keterangan_ = $item['Keterangan'];
+                        $Lat_ = $item['Lat'];
+                        $Long_ = $item['Long'];
 
-                    $marker = "lokasi" . $i;
-                    $info = "info" . $i;
-                    $konten = "konten" . $i;
+                        $marker = "lokasi" . $i;
+                        $info = "info" . $i;
+                        $konten = "konten" . $i;
 
-                    /**
-                     * menambahkan lokasi satu per satu ke peta
-                     */
-                    echo "var $marker = new google.maps.Marker({\n";
-                    echo "position: {lat: $Lat_, lng:$Long_},\n";
-                    echo "map: map\n";
-                    echo "});\n";
+                        /**
+                         * menambahkan lokasi satu per satu ke peta
+                         */
+                        echo "var $marker = new google.maps.Marker({\n";
+                        echo "position: {lat: $Lat_, lng:$Long_},\n";
+                        echo "map: map\n";
+                        echo "});\n";
 
-                    echo "var $konten = \"<div class='box box-info'>\" +
+                        echo "var $konten = \"<div class='box box-info'>\" +
                                                 \"<div class='box-header'>\" +
                                                 \"<h3>Toko $NamaToko_</h3>\" +
                                                 \"</div>\" +
@@ -80,45 +99,57 @@
                                                 \"<p>Alamat: $AlamatToko_</p>\" +
                                                 \"<p>Kecamatan: $Kecamatan_</p>\" +
                                                 \"</div>\" +
+                                                \"<div class='box-footer'>\" +
+                                                \"<div class='btn-group'>\" +
+                                                \"</div>\" +
+                                                \"</div>\" +
                                                 \"</div>\";";
-                    echo "var $info = new google.maps.InfoWindow({\n";
-                    echo "content: $konten\n";
-                    echo "});\n";
+                        echo "var $info = new google.maps.InfoWindow({\n";
+                        echo "content: $konten\n";
+                        echo "});\n";
 
-                    echo "$marker.addListener('click', function(){\n";
-                    echo "$info.open(map, $marker);\n";
-                    echo "});\n";
-                    $i++;
+                        echo "$marker.addListener('click', function(){\n";
+                        echo "$info.open(map, $marker);\n";
+
+                        /**
+                         * untuk hapus toko
+                         */
+                        echo "document.getElementById('IDTokoHapus').value = $ID_;\n";
+
+                        /**
+                         * untuk ubah toko
+                         */
+                        echo "document.getElementById('IDTokoUbah').value = $ID_;\n";
+                        echo "document.getElementById('LatUbah').value = $Lat_;\n";
+                        echo "document.getElementById('LongUbah').value = $Long_;\n";
+                        echo "document.getElementById('NamaTokoUbah').value = \"$NamaToko_\";\n";
+                        echo "document.getElementById('NamaPemilikUbah').value = \"$NamaPemilik_\";\n";
+                        echo "document.getElementById('NoTelpUbah').value = \"$NoTelp_\";\n";
+                        echo "document.getElementById('AlamatUbah').value = \"$AlamatToko_\";\n";
+                        echo "document.getElementById('IDKecamatanUbah').value = $IDKecamatan_;\n";
+                        echo "document.getElementById('KeteranganUbah').value = \"$Keterangan_\";\n";
+
+                        /**
+                         * untuk tambah & update produk
+                         */
+                        echo "document.getElementById('IDTokoUpdate').value= $ID_;";
+                        echo "document.getElementById('IDTokoTambah').value= $ID_;";
+
+                        echo "});\n";
+                        $i++;
+                    }
+                } else {
+
                 }
-
                 ?>
-
-//                google.maps.event.addListener(map, 'click', function (event) {
-//                    placeMarker(event.latLng);
-//                });
-
-//                function placeMarker(location) {
-//                    var lat = location.lat();
-//                    var long = location.lng();
-//                    if (marker) {
-//                        marker.setPosition(location);
-//                    } else {
-//                        marker = new google.maps.Marker({
-//                            position: location,
-//                            map: map
-//                        });
-//                    }
-//                    windowTambah.open(map, marker);
-//                    document.getElementById("Lat").value = lat;
-//                    document.getElementById("Long").value = long;
-//                }
             }
-
         </script>
-        <!-- akhir konten -->
         <?php require_once('main/element/modals.php'); ?>
+        <!-- akhir konten -->
 </div>
 <?php require_once('main/element/footer.php'); ?>
-
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb9WDbufMGSEGz5PGq8T4DHPqa08lP-hc&callback=initMap">
+</script>
 </body>
 </html>

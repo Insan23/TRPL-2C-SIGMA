@@ -29,14 +29,14 @@ class ControlPenjualan {
 
     public function tambahProduk()
     {
-        Penjualan::tambahProduk($_GET['_200ml'], $_GET['_600ml'], $_GET['_1500ml'], $_GET['Tanggal'], $_GET['IDToko']);
-        require_once ('main/pages/ko_agen-dashboard-pemetaan.php');
+        Penjualan::tambahProduk($_GET['_200ml'], $_GET['_600ml'], $_GET['_1500ml'], $_GET['Tanggal'], $_GET['IDTokoTambah']);
+        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
     }
 
     public function updateProduk()
     {
-        Penjualan::updateProduk($_GET['_200ml'], $_GET['_600ml'], $_GET['1500ml'], $_GET['Tanggal'], $_GET['IDToko']);
-        require_once ('main/pages/ko_agen-dashboard-pemetaan.php');
+        Penjualan::updateProduk($_GET['_200ml'], $_GET['_600ml'], $_GET['_1500ml'], $_GET['Tanggal'], $_GET['IDTokoUpdate']);
+        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
     }
 }
 ?>

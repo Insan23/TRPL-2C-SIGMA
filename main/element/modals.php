@@ -104,7 +104,7 @@
             <form method="get">
                 <input type="hidden" name="controller" value="penjualan">
                 <input type="hidden" name="action" value="updateProduk">
-                <input type="hidden" name="IDToko" id="IDToko">
+                <input type="hidden" name="IDTokoUpdate" id="IDTokoUpdate">
                 <div class="modal-header">
                     <h4 class="modal-title">Update Produk</h4>
                 </div>
@@ -115,7 +115,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker" name="Tanggal">
+                            <input type="text" class="form-control pull-right" id="datepicker1" name="Tanggal">
                         </div>
                         <div class="form-group">
                             <label for="_200ml">200ml</label>
@@ -149,7 +149,7 @@
             <form method="get">
                 <input type="hidden" name="controller" value="penjualan">
                 <input type="hidden" name="action" value="tambahProduk">
-                <input type="hidden" name="IDToko" id="IDToko">
+                <input type="hidden" name="IDTokoTambah" id="IDTokoTambah">
                 <input type="hidden">
                 <div class="modal-header">
                     <h4 class="modal-title">Tambah Produk</h4>
@@ -161,7 +161,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker" name="Tanggal">
+                            <input type="text" class="form-control pull-right" id="datepicker2" name="Tanggal">
                         </div>
                         <div class="form-group">
                             <label for="_200ml">200ml</label>
@@ -354,12 +354,17 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     $(function () {
-        $('#datepicker').datepicker({
+        $('#datepicker1').datepicker({
             autoclose: true,
-            format: 'yyy/mm/dd'
-        })
+            format: 'yyyy/mm/dd'
+        });
+        $('#datepicker2').datepicker({
+            autoclose: true,
+            format: 'yyyy/mm/dd'
+        });
     });
 </script>
 </section>
