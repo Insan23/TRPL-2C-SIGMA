@@ -33,13 +33,14 @@ class ControlProfil
             $_GET['Username'],
             $_GET['Password']
         );
-        header("location: index.php?controller=profil=koAgenProfil");
+
+        header("location: index.php?controller=profil&action=koAgenProfil");
     }
 
     public function ubahManajer()
     {
         Profil::ubahDataManajer($_GET['Nama'], $_GET['JenisKelamin'], $_GET['TanggalLahir'], $_GET['NoTelp'], $_GET['Username'], $_GET['Password']);
-        require_once ('main/pages/manajer-profil');
+        require_once('main/pages/manajer-profil');
     }
 }
 

@@ -31,7 +31,9 @@
     </section>
     <section class="content container-fluid">
         <!-- awal konten -->
-        <form action="" role="form">
+        <form role="form">
+            <input type="hidden" name="controller" value="profil">
+            <input type="hidden" name="action" value="ubahAgen">
             <div class="row">
                 <div class="col-md-4">
                     <div class="box box-primary">
@@ -51,7 +53,7 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="Username">Email</label>
-                                    <input type="email" name="Email" id="Email" placeholder="Email / Username..."
+                                    <input type="email" name="Username" id="Email" placeholder="Email / Username..."
                                            class="form-control" value="<?php echo $dataDiri['Username'] ?>">
                                 </div>
                                 <div class="form-group">
@@ -70,30 +72,30 @@
                         </div>
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="NamaAgen">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="user-name-edit"
+                                <label for="Nama">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="Nama" name="Nama"
                                        placeholder="Nama Lengkap..." value="<?php echo $dataDiri['NamaAgen']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="JenisKelamin">Jenis Kelamin</label>
                                 <div class="radio" id="JenisKelamin">
-                                    <label><input type="radio" name="JenisKelamin" id="laki">Laki-Laki</label>
+                                    <label><input type="radio" name="JenisKelamin" id="laki" value="Laki-Laki">Laki-Laki</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="JenisKelamin" id="perem">Perempuan</label>
+                                    <label><input type="radio" name="JenisKelamin" id="perem" value="Perempuan">Perempuan</label>
                                 </div>
                             </div>
                             <script type="text/javascript">
                                 var jk = <?php $l = $dataDiri['JenisKelamin'];echo "\"$l\";\n";?>
                                 if (jk == "Laki-Laki") {
-                                    document.getElementById("laki").checked="true";
+                                    document.getElementById("laki").checked = "true";
                                 } else {
-                                    document.getElementById("perem").checked="true";
+                                    document.getElementById("perem").checked = "true";
                                 }
                             </script>
                             <div class="form-group">
                                 <label for="Alamat">Alamat</label>
-                                <input type="text" class="form-control" id="Alamat"
+                                <input type="text" class="form-control" id="Alamat" name="Alamat"
                                        placeholder="Alamat..." value="<?php echo $dataDiri['Alamat']; ?>">
                             </div>
                             <div class="form-group">
@@ -111,7 +113,7 @@
                             </div>
                             <script type="text/javascript">
                                 var kec = <?php echo $dataDiri['IDKecamatan'] ?>;
-                                document.getElementById("Kecamatan").value = kec ;
+                                document.getElementById("Kecamatan").value = kec;
                             </script>
                             <div class="form-group">
                                 <label for="datepicker">Tanggal Lahir</label>
@@ -126,7 +128,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="nomor-telepon">Nomor Telepon</label>
-                                <input type="text" class="form-control" id="nomor-telepon"
+                                <input type="text" class="form-control" id="nomor-telepon" name="NoTelp"
                                        placeholder="Nomor Telepon..." value="<?php echo $dataDiri['NoTelp'] ?>">
                             </div>
                         </div>
@@ -144,16 +146,14 @@
         <?php require_once('main/element/modals.php'); ?>
 </div>
 <?php require_once('main/element/footer.php'); ?>
-<script>
+<script type="text/javascript">
     $(function () {
-        //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', {'placeholder': 'dd/mm/yyyy'});
-        //Date picker
         $('#datepicker').datepicker({
-            autoclose: true
+            autoclose: true,
+            format: 'yyyy-mm-dd'
         });
-
-    })
+    });
 </script>
+
 </body>
 </html>

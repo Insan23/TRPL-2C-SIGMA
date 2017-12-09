@@ -53,8 +53,8 @@
                 echo "</thead>";
                 echo "<tbody>";
                 echo "<tr><td>200ml</td><td>$Diterima200</td><td>$Terima</td><td>$Terjual200</td><td>$Terjual</td><td>$sisa200</td></tr>";
-                echo "<tr><td>200ml</td><td>$Diterima600</td><td>$Terima</td><td>$Terjual600</td><td>$Terjual</td><td>$sisa600</td></tr>";
-                echo "<tr><td>200ml</td><td>$Diterima1500</td><td>$Terima</td><td>$Terjual1500</td><td>$Terjual</td><td>$sisa1500</td></tr>";
+                echo "<tr><td>600ml</td><td>$Diterima600</td><td>$Terima</td><td>$Terjual600</td><td>$Terjual</td><td>$sisa600</td></tr>";
+                echo "<tr><td>1500ml</td><td>$Diterima1500</td><td>$Terima</td><td>$Terjual1500</td><td>$Terjual</td><td>$sisa1500</td></tr>";
                 echo "</tbody>";
                 echo "</table>";
             }
