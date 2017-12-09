@@ -21,7 +21,8 @@ class Laporan
             $hasil[] = array(
                 'Diterima' => $item['Diterima'],
                 'Terjual' => $item['Terjual'],
-                'Kecamatan' => $item['Kecamatan']
+                'Kecamatan' => $item['Kecamatan'],
+                'IDKecamatan' => $item['IDKecamatan']
             );
         }
         return $hasil;

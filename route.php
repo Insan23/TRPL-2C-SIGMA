@@ -32,6 +32,7 @@
                 $controller = new ControlProfil();
                 break;
             case 'laporan':
+                require_once ('main/model/Pemetaan.php');
                 require_once ('main/model/Laporan.php');
                 $controller = new ControlLaporan();
                 break;

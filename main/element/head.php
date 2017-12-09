@@ -24,30 +24,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
 <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
-
 <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 <script src="assets/bower_components/select2/dist/js/select2.full.min.js"></script>
 
 <script src="plugins/input-mask/jquery.inputmask.js"></script>
 <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
-
+<script src="assets/bower_components/chart.js/Chart.js"></script>
 <script src="assets/bower_components/moment/min/moment.min.js"></script>
 <script src="assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 
 <script src="assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
 <script src="assets/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-
 <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
-
 <script src="assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-
 <script src="plugins/iCheck/icheck.min.js"></script>
-
 <script src="assets/bower_components/fastclick/lib/fastclick.js"></script>
-
 <script src="assets/js/adminlte.min.js"></script>
-
-<script src="assets/js/demo.js"></script>

@@ -21,7 +21,15 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Grafik Penjualan Per Kecamatan
+            <?php
+            if (isset($kecamatan)) {
+                $namKecamatan = $kecamatan;
+                echo "Grafik Penjualan $namKecamatan";
+            } else {
+                echo "Grafik Penjualan";
+            }print_r($distribusiPerTahun);
+            ?>
+
             <small></small>
         </h1>
         <ol class="breadcrumb">
@@ -34,10 +42,24 @@
         <!-- awal konten -->
         <?php
         if (isset($kecamatan)) {
+            /**
+             * grafik distribusi
+             */
             echo "<div class='box box-success'>";
             echo "<div class='box-header'>";
-            $namKecamatan = $kecamatan['Kecamatan'];
-            echo "<h3>$namKecamatan</h3>";
+            echo "<h3>Distribusi</h3>";
+            echo "</div>";
+            echo "<div class='box-body'>";
+            echo "<div class='chart'><canvas id='grafikProduk' style='height:250px'></canvas></div>";
+            echo "</div>";
+            echo "</div>";
+            /**
+             * grafik penjualan
+             */
+            echo "<div class='box box-success'>";
+            echo "<div class='box-header'>";
+
+            echo "<h3>Penjualan</h3>";
             echo "</div>";
             echo "<div class='box-body'>";
             echo "<div class='chart'><canvas id='grafikProduk' style='height:250px'></canvas></div>";
@@ -46,6 +68,7 @@
             echo "<div class='box box-warning'>";
             echo "<div class='box-header'><h3>Tidak Ada Data</h3></div>";
             echo "<div class='box-body'>Tidak Ada Data Produk Distribusi</div>";
+            echo "</div>";
             echo "</div>";
         }
         ?>
@@ -95,34 +118,34 @@
                     $data1500['Juli'] = $item['dis1500'];
                     break;
                 case 7:
+                    $data200['Januari'] = $item['dis200'];
+                    $data600['Januari'] = $item['dis600'];
+                    $data1500['Januari'] = $item['dis1500'];
+                    break;
+                case 8:
                     $data200['Agustus'] = $item['dis200'];
                     $data600['Agustus'] = $item['dis600'];
                     $data1500['Agustus'] = $item['dis1500'];
                     break;
-                case 8:
+                case 9:
                     $data200['September'] = $item['dis200'];
                     $data600['September'] = $item['dis600'];
                     $data1500['September'] = $item['dis1500'];
                     break;
-                case 9:
+                case 10:
                     $data200['Oktober'] = $item['dis200'];
                     $data600['Oktober'] = $item['dis600'];
                     $data1500['Oktober'] = $item['dis1500'];
                     break;
-                case 10:
+                case 11:
                     $data200['November'] = $item['dis200'];
                     $data600['November'] = $item['dis600'];
                     $data1500['November'] = $item['dis1500'];
                     break;
-                case 11:
+                case 12:
                     $data200['Desember'] = $item['dis200'];
                     $data600['Desember'] = $item['dis600'];
                     $data1500['Desember'] = $item['dis1500'];
-                    break;
-                case 12:
-                    $data200['Januari'] = $item['dis200'];
-                    $data600['Januari'] = $item['dis600'];
-                    $data1500['Januari'] = $item['dis1500'];
                     break;
                 default:
                     $data200 = array('Januari' => 0, 'Februari' => 0, 'Maret' => 0, 'April' => 0, 'Mei' => 0, 'Juni' => 0, 'Juli' => 0, 'Agustus' => 0, 'September' => 0, 'Oktober' => 0, 'November' => 0, 'Desember' => 0);
@@ -131,22 +154,22 @@
                     break;
             }
         }
+        echo "$(function () {";
+        echo "var chart = $('#grafikProduk').get(0).getContext('2d');\n";
+        echo "var chartProdukDiterima = new Chart(chart);\n";
 
-        echo "var chart = $('#grafikProduk').get(0).getContent('2d');";
-        echo "var chartProdukDiterima = new Chart(chart);";
-
-        echo "var chartData = {";
-        echo "labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],";
-        echo "datasets: [";
-        echo "{";
-        echo "label: Terdistribusi200,";
-        echo "fillColor: 'rgba(33, 150, 243, 1),'";
-        echo "strokeColor: 'rgba(33, 150, 243, 1)',";
-        echo "pointColor: 'rgba(33, 150, 243, 1)',";
-        echo "pointStrokeColor: 'rgba(33, 150, 243, 1)',";
-        echo "pointHighlightFill: '#fff',";
-        echo "pointHighlightStroke: 'rgba(33, 150, 243, 1)',";
-        echo "data: [";
+        echo "var chartData = {\n";
+        echo "labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],\n";
+        echo "datasets: [\n";
+        echo "{\n";
+        echo "label: 'Terdistribusi200',\n";
+        echo "fillColor: 'rgba(33, 150, 243, 1)',\n";
+        echo "strokeColor: 'rgba(33, 150, 243, 1)',\n";
+        echo "pointColor: 'rgba(33, 150, 243, 1)',\n";
+        echo "pointStrokeColor: 'rgba(33, 150, 243, 1)',\n";
+        echo "pointHighlightFill: '#fff',\n";
+        echo "pointHighlightStroke: 'rgba(33, 150, 243, 1)',\n";
+        echo "data: [\n";
         $i = count($data200);
         $j = 0;
         foreach ($data200 as $item) {
@@ -157,17 +180,17 @@
             }
             $j++;
         }
-        echo "]";
-        echo "},";
-        echo "{";
-        echo "label: Terdistribusi600,";
-        echo "fillColor: 'rgba(25, 118, 210, 1),'";
-        echo "strokeColor: 'rgba(25, 118, 210, 1)',";
-        echo "pointColor: 'rgba(25, 118, 210, 1)',";
-        echo "pointStrokeColor: 'rgba(25, 118, 210, 1)',";
-        echo "pointHighlightFill: '#fff',";
-        echo "pointHighlightStroke: 'rgba(25, 118, 210, 1)',";
-        echo "data: [";
+        echo "]\n";
+        echo "},\n";
+        echo "{\n";
+        echo "label: 'Terdistribusi600',\n";
+        echo "fillColor: 'rgba(25, 118, 210, 1)',\n";
+        echo "strokeColor: 'rgba(25, 118, 210, 1)',\n";
+        echo "pointColor: 'rgba(25, 118, 210, 1)',\n";
+        echo "pointStrokeColor: 'rgba(25, 118, 210, 1)',\n";
+        echo "pointHighlightFill: '#fff',\n";
+        echo "pointHighlightStroke: 'rgba(25, 118, 210, 1)',\n";
+        echo "data: [\n";
         $i = count($data600);
         $j = 0;
         foreach ($data600 as $item) {
@@ -178,11 +201,54 @@
             }
             $j++;
         }
-        echo "]";
-        echo "},";
+        echo "]\n";
+        echo "},\n";
+        echo "{\n";
+        echo "label: 'Terdistribusi1500',\n";
+        echo "fillColor: 'rgba(13, 71, 161, 1)',\n";
+        echo "strokeColor: 'rgba(13, 71, 161, 1)',\n";
+        echo "pointColor: 'rgba(13, 71, 161, 1)',\n";
+        echo "pointStrokeColor: 'rgba(13, 71, 161, 1)',\n";
+        echo "pointHighlightFill: '#fff',\n";
+        echo "pointHighlightStroke: 'rgba(13, 71, 161, 1)',\n";
+        echo "data: [\n";
+        $i = count($data1500);
+        $j = 0;
+        foreach ($data1500 as $item) {
+            if ($j == $i) {
+                echo "$item";
+            } else {
+                echo "$item,";
+            }
+            $j++;
+        }
+        echo "]\n";
+        echo "}\n";
+        echo "]\n";
+        echo "};\n";
 
-
-        echo "};";
+        echo "var option = {\n";
+        echo "showScale: true,
+            scaleShowGridLines: false,
+            scaleGridLineColor: 'rgba(0,0,0,.05)',
+            scaleGridLineWidth: 1,
+            scaleShowHorizontalLines: true,
+            scaleShowVerticalLines: true,
+            bezierCurve: false,
+            bezierCurveTension: 0,
+            pointDot: true,
+            pointDotRadius: 4,
+            pointDotStrokeWidth: 1,
+            pointHitDetectionRadius: 20,
+            datasetStroke: true,
+            datasetStrokeWidth: 2,
+            datasetFill: false,
+            legendTemplate: '<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+            maintainAspectRatio: true,
+            responsive: true";
+        echo "}\n";
+        echo "chartProdukDiterima.Line(chartData, option);\n";
+        echo "})\n";
     }
     ?>
 </script>
