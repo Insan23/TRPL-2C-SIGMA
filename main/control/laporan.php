@@ -12,6 +12,9 @@ class ControlLaporan {
     }
 
     public function manajerLaporanGrafik() {
+        $kecamatan = Pemetaan::bacaSatuKecamatan($_GET['IDKecamatan']);
+        $distribusiPerTahun = Laporan::terdistribusiPerTahun($_GET['IDKecamatan']);
+        $TerjualPerTahun = Laporan::terjualPerTahun($_GET['IDKecamatan']);
         require_once ('main/pages/manajer-dashboard-laporan_grafik.php');
     }
 

@@ -93,6 +93,16 @@ class Pemetaan
         $db = DB::getInstance();
         $db->query("UPDATE toko SET StatusToko = 'Berhenti' WHERE IDToko = $ID");
     }
+
+    public static function bacaSatuKecamatan($ID)
+    {
+        $db = DB::getInstance();
+        $req = $db->query("SELECT Kecamatan FROM kecamatan WHERE IDKecamatan = $ID;");
+        foreach ($req as $item) {
+            $hasil = $item['Kecamatan'];
+        }
+        return $hasil;
+    }
 }
 
 ?>
