@@ -7,7 +7,7 @@
  */
 class ControlLaporan {
     public function manajerLaporan() {
-
+        $listKecamatan = Laporan::daftarPerBulan();
         require_once ('main/pages/manajer-dashboard-laporan.php');
     }
 

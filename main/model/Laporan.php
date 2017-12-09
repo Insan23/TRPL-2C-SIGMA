@@ -13,6 +13,19 @@ class Laporan
 
     }
 
+    public static function daftarPerBulan() {
+        $db = DB::getInstance();
+        $req = $db->query("SELECT (SUM(s.200ml_diterima) + SUM(s.600ml_diterima) + SUM(s.1500ml_diterima)) as Diterima, (SUM(s.200ml_terjual) + SUM(s.600ml_terjual) + SUM(s.1500ml_terjual)) as Terjual, k.Kecamatan, k.IDKecamatan FROM toko t JOIN stok s ON t.IDToko = s.IDToko JOIN kecamatan k ON t.IDKecamatan = k.IDKecamatan GROUP BY k.Kecamatan;");
+        foreach ($req as $item) {
+            $hasil[] = array(
+                'Diterima'=>$item['Diterima'],
+                'Terjual'=>$item['Terjual'],
+                'Kecamatan'=>$item['Kecamatan']
+            );
+        }
+        return $hasil;
+    }
+
     public static function terdistribusiPerTahun($kecamatan)
     {
         $db = DB::getInstance();

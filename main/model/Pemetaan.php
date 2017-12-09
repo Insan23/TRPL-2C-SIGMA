@@ -68,10 +68,10 @@ class Pemetaan
         $loc = $db->query("INSERT INTO maptoko(Latitude, Longitude, IDToko) VALUES ('$Lat', '$Long', '$ID');");
     }
 
-    public static function ubahToko($NamaToko, $NamaPemilik, $Alamat, $NoTelp, $Keterangan, $IDToko, $Lat, $Long)
+    public static function ubahToko($IDToko, $NamaToko, $NamaPemilik, $Alamat, $NoTelp, $IDKecamatan, $Keterangan, $IDAgen, $Lat, $Long)
     {
         $db = DB::getInstance();
-        $updateToko = $db->query("UPDATE toko SET NamaToko='$NamaToko', NamaPemilik='$NamaPemilik', AlamatToko='$Alamat', NoTelp='$NoTelp', Keterangan='$Keterangan' WHERE IDToko='$IDToko';");
+        $updateToko = $db->query("UPDATE toko SET NamaToko='$NamaToko', NamaPemilik='$NamaPemilik', AlamatToko='$Alamat', NoTelp='$NoTelp', Keterangan='$Keterangan', IDKecamatan=$IDKecamatan WHERE IDToko='$IDToko';");
         $updateLokasi = $db->query("UPDATE maptoko SET Latitude='$Lat', Longitude='$Long' WHERE IDToko='$IDToko'");
     }
 

@@ -31,7 +31,7 @@
     <nav>
         <a href="#banner">Beranda</a>
         <a href="#section_one">Fitur</a>
-        <a href="">Tentang</a>
+        <a href="#section_four">Tentang</a>
         <a href="?controller=login&action=login">Masuk</a>
     </nav>
 </header>

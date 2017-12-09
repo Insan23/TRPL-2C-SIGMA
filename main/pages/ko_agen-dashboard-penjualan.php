@@ -37,19 +37,19 @@
             echo "<div class='box box-primary'>";
             echo "<div class='box-header'><h3>$namaKec</h3></div>";
             echo "<div class='box-body'>";
-            echo "<table class='table table-bordered table-hover'>";
+            echo "<div class='list-group'>";
             foreach ($toko as $tok) {
                 $namaTok = $tok['NamaToko'];
                 $IDTok = $tok['IDToko'];
                 if ($tok['Kecamatan'] == $namaKec) {
                     echo "<tr><td>";
                     echo "<div class='col-md-12'>";
-                    echo "<a class='btn btn-default btn-block btn-flat' type='button' href='?controller=penjualan&action=koAgenPenjualanToko&IDToko=$IDTok'>$namaTok</a>";
+                    echo "<a class='list-group-item' href='?controller=penjualan&action=koAgenPenjualanToko&IDToko=$IDTok'>$namaTok</a>";
                     echo "</div>";
                     echo "</td></tr>";
                 }
             }
-            echo "</table>";
+            echo "</div>";
             echo "</div></div>";
         }
         ?>

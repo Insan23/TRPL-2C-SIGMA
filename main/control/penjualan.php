@@ -20,10 +20,13 @@ class ControlPenjualan {
     }
 
     public function manajerPenjualan() {
+        $kecamatan = Penjualan::lihatTokoPadaKec();
+        $toko = Penjualan::lihatTokoPerKec();
         require_once ('main/pages/manajer-dashboard-penjualan.php');
     }
 
     public function manajerPenjualanToko() {
+        $toko = Penjualan::lihatProdukPerBulan($_GET['IDToko']);
         require_once ('main/pages/manajer-dashboard-penjualan_toko.php');
     }
 

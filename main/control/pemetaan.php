@@ -51,14 +51,16 @@ class ControlPemetaan
     public function ubahToko()
     {
         Pemetaan::ubahToko(
-            $_GET['NamaToko'],
-            $_GET['NamaPemilik'],
-            $_GET['Alamat'],
-            $_GET['NoTelp'],
-            $_GET['Keterangan'],
+            $_GET['IDTokoUbah'],
+            $_GET['NamaTokoUbah'],
+            $_GET['NamaPemilikUbah'],
+            $_GET['AlamatUbah'],
+            $_GET['NoTelpUbah'],
+            $_GET['IDKecamatanUbah'],
+            $_GET['KeteranganUbah'],
             $_SESSION['ID'],
-            $_GET['Lat'],
-            $_GET['Long']
+            $_GET['LatUbah'],
+            $_GET['LongUbah']
         );
 //        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
         header("location: index.php?controller=pemetaan&action=koAgenPemetaan");

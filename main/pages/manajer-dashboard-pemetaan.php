@@ -82,7 +82,7 @@
                         $konten = "konten" . $i;
 
                         /**
-                         * menambahkan lokasi satu per satu ke peta
+                         * menampilkan toko
                          */
                         echo "var $marker = new google.maps.Marker({\n";
                         echo "position: {lat: $Lat_, lng:$Long_},\n";
@@ -110,31 +110,6 @@
 
                         echo "$marker.addListener('click', function(){\n";
                         echo "$info.open(map, $marker);\n";
-
-                        /**
-                         * untuk hapus toko
-                         */
-                        echo "document.getElementById('IDTokoHapus').value = $ID_;\n";
-
-                        /**
-                         * untuk ubah toko
-                         */
-                        echo "document.getElementById('IDTokoUbah').value = $ID_;\n";
-                        echo "document.getElementById('LatUbah').value = $Lat_;\n";
-                        echo "document.getElementById('LongUbah').value = $Long_;\n";
-                        echo "document.getElementById('NamaTokoUbah').value = \"$NamaToko_\";\n";
-                        echo "document.getElementById('NamaPemilikUbah').value = \"$NamaPemilik_\";\n";
-                        echo "document.getElementById('NoTelpUbah').value = \"$NoTelp_\";\n";
-                        echo "document.getElementById('AlamatUbah').value = \"$AlamatToko_\";\n";
-                        echo "document.getElementById('IDKecamatanUbah').value = $IDKecamatan_;\n";
-                        echo "document.getElementById('KeteranganUbah').value = \"$Keterangan_\";\n";
-
-                        /**
-                         * untuk tambah & update produk
-                         */
-                        echo "document.getElementById('IDTokoUpdate').value= $ID_;";
-                        echo "document.getElementById('IDTokoTambah').value= $ID_;";
-
                         echo "});\n";
                         $i++;
                     }

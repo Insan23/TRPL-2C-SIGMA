@@ -291,7 +291,7 @@
                             <div class="form-group">
                                 <label for="LatUbah">Lintang</label>
                                 <input type="text" name="LatUbah" class="form-control" placeholder="Lintang"
-                                       id="LatUbah" value="">
+                                       id="LatUbah">
                             </div>
                         </div>
                         <div class="col-lg-6">

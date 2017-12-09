@@ -92,7 +92,7 @@
                         </div>
                         <div class="box-footer">
                             <div class="btn-group pull-right">
-                                <button type="button" class="btn btn-default" href="">Kembali</button>
+                                <a type="button" class="btn btn-default" href="?controller=home&action=home">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Masuk</button>
                             </div>
                         </div>
