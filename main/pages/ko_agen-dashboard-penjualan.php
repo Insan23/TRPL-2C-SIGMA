@@ -57,6 +57,8 @@
         <?php require_once('main/element/modals.php'); ?>
 </div>
 <?php require_once('main/element/footer.php'); ?>
+<script>
 
+</script>
 </body>
 </html>

@@ -105,6 +105,7 @@
                 <input type="hidden" name="controller" value="penjualan">
                 <input type="hidden" name="action" value="updateProduk">
                 <input type="hidden" name="IDTokoUpdate" id="IDTokoUpdate">
+                <input type="hidden" name="Tanggal" id="tanggalUbah">
                 <div class="modal-header">
                     <h4 class="modal-title">Update Produk</h4>
                 </div>
@@ -115,7 +116,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker1" name="Tanggal">
+                            <input type="text" class="form-control pull-right" id="datepicker1" name="Tanggal" disabled>
                         </div>
                         <div class="form-group">
                             <label for="_200ml">200ml</label>
@@ -150,6 +151,7 @@
                 <input type="hidden" name="controller" value="penjualan">
                 <input type="hidden" name="action" value="tambahProduk">
                 <input type="hidden" name="IDTokoTambah" id="IDTokoTambah">
+                <input type="hidden" name="Tanggal" id="tanggalTambah">
                 <input type="hidden">
                 <div class="modal-header">
                     <h4 class="modal-title">Tambah Produk</h4>
@@ -161,19 +163,22 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker2" name="Tanggal">
+                            <input type="text" class="form-control pull-right" id="datepicker2" disabled>
                         </div>
                         <div class="form-group">
                             <label for="_200ml">200ml</label>
                             <input type="text" name="_200ml" class="form-control" id="_200ml">
+                            <label for="_200ml" id="warn-200" class="text-red"></label>
                         </div>
                         <div class="form-group">
                             <label for="_600ml">600ml</label>
                             <input type="text" name="_600ml" class="form-control" id="_600ml">
+                            <label for="_200ml" id="warn-600" class="text-red"></label>
                         </div>
                         <div class="form-group">
                             <label for="_1500ml">1500ml</label>
                             <input type="text" name="_1500ml" class="form-control" id="_1500ml">
+                            <label for="_200ml" id="warn-1500" class="text-red"></label>
                         </div>
                     </div>
                 </div>
@@ -181,6 +186,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" onclick="cek()">cek</button>
                     </div>
                 </div>
             </form>
@@ -356,6 +362,24 @@
 </div>
 
 <script type="text/javascript">
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd = '0'+dd
+    }
+
+    if(mm<10) {
+        mm = '0'+mm
+    }
+
+    today = yyyy + '/' + mm + '/' + dd;
+    document.getElementById('datepicker1').value = today;
+    document.getElementById('datepicker2').value = today;
+    document.getElementById('tanggalTambah').value = today;
+    document.getElementById('tanggalUbah').value = today;
     $(function () {
         $('#datepicker1').datepicker({
             autoclose: true,
@@ -366,6 +390,11 @@
             format: 'yyyy/mm/dd'
         });
     });
+
+    function cek() {
+        console.log(document.getElementById('datepicker1').value);
+        console.log(document.getElementById('datepicker2').value);
+    }
 </script>
 </section>
 </div>

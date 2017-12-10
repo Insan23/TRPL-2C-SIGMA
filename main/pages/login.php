@@ -59,7 +59,7 @@
 
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <form method="get">
+                <form method="get" id="formLogin">
                     <input type="hidden" name="controller" value="login">
                     <input type="hidden" name="action" value="authentication">
                     <div class="box box-info">
@@ -73,8 +73,10 @@
                                         <label for="username">Username</label>
                                     </div>
                                     <div class="col-md-9">
-                                        <input type="text" name="username" class="form-control" placeholder="Username..."
+                                        <input type="text" name="username" class="form-control"
+                                               placeholder="Username..."
                                                id="username">
+                                        <label for="username" class="text-red" id="warn-username"></label>
                                     </div>
                                 </div>
                             </div>
@@ -86,6 +88,7 @@
                                     <div class="col-md-9">
                                         <input type="password" name="password" class="form-control"
                                                placeholder="Password..." id="password">
+                                        <label for="username" class="text-red" id="warn-password"></label>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +96,7 @@
                         <div class="box-footer">
                             <div class="btn-group pull-right">
                                 <a type="button" class="btn btn-default" href="?controller=home&action=home">Kembali</a>
-                                <button type="submit" class="btn btn-primary">Masuk</button>
+                                <button type="button" class="btn btn-primary" onclick="cekLogin()">Masuk</button>
                             </div>
                         </div>
                     </div>
@@ -114,7 +117,29 @@
     </footer>
     <div class="control-sidebar-bg"></div>
 </div>
+<script>
+    function cekLogin() {
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        var warnUser = document.getElementById('warn-username');
+        var warnPass = document.getElementById('warn-password');
+        var cekUser = false;
+        var cekPassword = false;
 
+        warnUser.innerHTML = "";
+        warnPass.innerHTML = "";
+
+        if (username.value === "" || username.value === null) warnUser.innerHTML = 'Username Tidak Boleh Kosong!!!';
+        else cekUser = true;
+
+        if (password.value === "" || password.value === null) warnPass.innerHTML = 'Password Tidak Boleh Kosong!!!';
+        else cekPassword = true;
+
+        console.log(cekUser + " and" + cekPassword);
+
+        if (cekUser && cekPassword) document.getElementById('formLogin').submit();
+    }
+</script>
 <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="assets/js/adminlte.min.js"></script>

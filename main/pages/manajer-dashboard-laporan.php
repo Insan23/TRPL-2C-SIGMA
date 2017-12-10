@@ -73,7 +73,7 @@
             echo "</div>";
 
         } else {
-            echo "<div class=\"callout callout-info\">";
+            echo "<div class=\"callout callout-warning\">";
             echo "<h4>Tidak Ada Data Laporan</h4>";
             echo "<p>Silahkan Hubungi Koordinator Yang Bersangkutan.</p>";
             echo "<div>";

@@ -21,7 +21,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-
+            Pemetaan Toko
             <small></small>
         </h1>
         <ol class="breadcrumb">
@@ -98,6 +98,7 @@
                                                 \"<p>No Telp: $NoTelp_</p>\" +
                                                 \"<p>Alamat: $AlamatToko_</p>\" +
                                                 \"<p>Kecamatan: $Kecamatan_</p>\" +
+                                                \"<p>Koordinator</p>\" +
                                                 \"</div>\" +
                                                 \"<div class='box-footer'>\" +
                                                 \"<div class='btn-group'>\" +

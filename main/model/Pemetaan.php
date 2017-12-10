@@ -15,7 +15,7 @@ class Pemetaan
     public static function bacaPinToko()
     {
         $db = DB::getInstance();
-        $req = $db->query("SELECT toko.IDToko, toko.NamaToko, toko.NamaPemilik, toko.AlamatToko, toko.IDKecamatan, kecamatan.Kecamatan, toko.NoTelp, toko.Keterangan, maptoko.Latitude, maptoko.Longitude FROM toko JOIN maptoko ON toko.IDToko = maptoko.IDToko JOIN kecamatan ON toko.IDKecamatan = kecamatan.IDKecamatan WHERE toko.StatusToko = 'Ada'");
+        $req = $db->query("SELECT toko.IDToko, toko.NamaToko, toko.NamaPemilik, toko.AlamatToko, toko.IDKecamatan, kecamatan.Kecamatan, toko.NoTelp, toko.Keterangan, maptoko.Latitude, maptoko.Longitude FROM toko JOIN maptoko ON toko.IDToko = maptoko.IDToko JOIN kecamatan ON toko.IDKecamatan = kecamatan.IDKecamatan JOIN agen a ON toko.IDAgen = a.IDAgen WHERE toko.StatusToko = 'Ada'");
         foreach ($req as $item) {
             $list[] = array(
                 'ID' => $item['IDToko'],

@@ -16,7 +16,8 @@ class Penjualan
     public static function tambahProduk($_200ml, $_600ml, $_1500ml, $tanggal, $idtoko)
     {
         $db = DB::getInstance();
-        $req = $db->query("INSERT INTO stok(200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, TanggalDiterima, IDToko) VALUES ($_200ml, $_600ml, $_1500ml, '$tanggal', $idtoko)");
+        print "INSERT INTO stok(200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, TanggalDiterima, IDToko) VALUES ($_200ml, $_600ml, $_1500ml, '$tanggal', $idtoko);";
+        $req = $db->query("INSERT INTO stok(200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, TanggalDiterima, IDToko) VALUES ($_200ml, $_600ml, $_1500ml, '$tanggal', $idtoko);");
         return $req;
     }
 
@@ -32,7 +33,7 @@ class Penjualan
         $db = DB::getInstance();
         $req = $db->query("SELECT IDStok, 200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, 200ml_Terjual, 600ml_Terjual, 1500ml_Terjual, TanggalDiterima, TanggalTerjual, IDToko FROM stok WHERE YEAR(TanggalDiterima) = YEAR(NOW()) AND IDToko = $IDToko;");
         foreach ($req as $item) {
-            $list[] = array(
+            $hasil[] = array(
                 'IDStok' => $item['IDStok'],
                 'Diterima200' => $item['200ml_Diterima'],
                 'Diterima600' => $item['600ml_Diterima'],
@@ -44,7 +45,7 @@ class Penjualan
                 'TanggalTerjual' => $item['TanggalTerjual'],
                 'IDToko' => $item['IDToko']
             );
-            return $list;
+            return $hasil;
         }
     }
 
@@ -53,11 +54,12 @@ class Penjualan
         $db = DB::getInstance();
         $req = $db->query("SELECT DISTINCT Kecamatan FROM kecamatan k JOIN toko t ON t.IDKecamatan = k.IDKecamatan WHERE t.StatusToko = 'Ada' ORDER BY Kecamatan");
         foreach ($req as $item) {
-            $list[] = array(
+            $hasil[] = array(
                 'Kecamatan' => $item['Kecamatan']
             );
         }
-        return $list;
+        if (isset($hasil)) return $hasil;
+        else return null;
     }
 
     public static function lihatTokoPerKec()
@@ -65,7 +67,7 @@ class Penjualan
         $db = DB::getInstance();
         $req = $db->query("SELECT t.IDToko, t.NamaToko, t.NamaPemilik, t.AlamatToko, t.IDKecamatan, k.Kecamatan, t.NoTelp, t.Keterangan FROM toko t JOIN kecamatan k ON k.IDKecamatan = t.IDKecamatan ORDER BY t.IDKecamatan");
         foreach ($req as $item) {
-            $list[] = array(
+            $hasil[] = array(
                 'IDToko' => $item['IDToko'],
                 'NamaToko' => $item['NamaToko'],
                 'AlamatToko' => $item['AlamatToko'],
@@ -73,7 +75,8 @@ class Penjualan
                 'Keterangan' => $item['Keterangan']
             );
         }
-        return $list;
+        if (isset($hasil)) return $hasil;
+        else return null;
     }
 }
 
