@@ -32,9 +32,9 @@ class ControlPenjualan {
 
     public function tambahProduk()
     {
-        print_r($_GET);
-//        Penjualan::tambahProduk($_GET['_200ml'], $_GET['_600ml'], $_GET['_1500ml'], $_GET['Tanggal'], $_GET['IDTokoTambah']);
-//        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
+//        print_r($_GET);
+        Penjualan::tambahProduk($_GET['_200ml'], $_GET['_600ml'], $_GET['_1500ml'], $_GET['Tanggal'], $_GET['IDTokoTambah']);
+        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
     }
 
     public function updateProduk()

@@ -76,6 +76,7 @@
                         $Keterangan_ = $item['Keterangan'];
                         $Lat_ = $item['Lat'];
                         $Long_ = $item['Long'];
+                        $NamaAgen_ = $item['NamaAgen'];
 
                         $marker = "lokasi" . $i;
                         $info = "info" . $i;
@@ -98,7 +99,7 @@
                                                 \"<p>No Telp: $NoTelp_</p>\" +
                                                 \"<p>Alamat: $AlamatToko_</p>\" +
                                                 \"<p>Kecamatan: $Kecamatan_</p>\" +
-                                                \"<p>Koordinator</p>\" +
+                                                \"<p>Koordinator: $NamaAgen_</p>\" +
                                                 \"</div>\" +
                                                 \"<div class='box-footer'>\" +
                                                 \"<div class='btn-group'>\" +

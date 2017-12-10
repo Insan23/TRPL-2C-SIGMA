@@ -99,7 +99,7 @@
                                        placeholder="Alamat..." value="<?php echo $dataDiri['Alamat']; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="Kecamatan">Kecamatan</label>
+                                <label for="Kecamatan">Daerah Operasi</label>
                                 <select name="Kecamatan" id="Kecamatan" class="form-control">
                                     <option value="none" selected>Pilih Kecamatan...</option>
                                     <?php

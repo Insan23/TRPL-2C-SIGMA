@@ -95,25 +95,31 @@
                 echo "map: map\n";
                 echo "});\n";
 
-                echo "var $konten = \"<div class='box box-info'>\" +
-                                                \"<div class='box-header'>\" +
-                                                \"<h3>Toko $NamaToko_</h3>\" +
-                                                \"</div>\" +
-                                                \"<div class='box-body'>\" +
-                                                \"<p>Pemilik: $NamaPemilik_</p>\" +
-                                                \"<p>No Telp: $NoTelp_</p>\" +
-                                                \"<p>Alamat: $AlamatToko_</p>\" +
-                                                \"<p>Kecamatan: $Kecamatan_</p>\" +
-                                                \"</div>\" +
-                                                \"<div class='box-footer'>\" +
-                                                \"<div class='btn-group'>\" +
-                                                \"<button type='button' class='btn btn-danger' data-toggle='modal' data-target='#modal-hapus-toko'>Hapus Toko</button>\" +
-                                                \"<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modal-ubah-toko'>Ubah Toko</button>\" +
-                                                \"<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-tambah-produk'>Tambah Produk</button>\" +
-                                                \"<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-update-produk'>Update Penjualan</button>\" +
-                                                \"</div>\" +
-                                                \"</div>\" +
-                                                \"</div>\";";
+                echo "var $konten = \"<div class='box box-info'>\"\n";
+                echo "<div class='box-header'>\n";
+                echo "<h3>Toko $NamaToko_</h3>\n";
+                echo "</div>\n";
+                echo "<div class='box-body'>\n";
+                echo "<p>Pemilik: $NamaPemilik_</p>\n";
+                echo "<p>No Telp: $NoTelp_</p>\n";
+                echo "<p>Alamat: $AlamatToko_</p>\n";
+                echo "<p>Kecamatan: $Kecamatan_</p>\n";
+                echo "</div>\n";
+                echo "<div class='box-footer'>\n";
+                echo "<div class='btn-group'>\n";
+                if () {
+
+                } else {
+
+                }
+                echo "<button type='button' class='btn btn-danger' data-toggle='modal' data-target='#modal-hapus-toko'>Hapus Toko</button>\n";
+                echo "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modal-ubah-toko'>Ubah Toko</button>\n";
+                echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-tambah-produk'>Tambah Produk</button>\n";
+                echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-update-produk'>Update Penjualan</button>\n";
+                echo "</div>\n";
+                echo "</div>\n";
+                echo "</div>\n";
+
                 echo "var $info = new google.maps.InfoWindow({\n";
                 echo "content: $konten\n";
                 echo "});\n";
