@@ -54,7 +54,9 @@
      */
     var marker;
     var windowTambah;
+    var windowError;
     var kontenTambah = "<button type='button' class='btn btn-default btn-flat' data-toggle='modal' data-target='#modal-input-toko'>Tambah Lokasi Toko</button>";
+    var kontenError = "<h3>Wilayah Toko Diluar Jember</h3>";
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('peta'), {
@@ -63,9 +65,12 @@
             fullscreenControl: false,
             streetViewControl: false
         });
-        // Create a map object and specify the DOM element for display.
+
         windowTambah = new google.maps.InfoWindow({
             content: kontenTambah
+        });
+        windowError = new google.maps.InfoWindow({
+            content: kontenError
         });
 
         <?php
@@ -117,7 +122,6 @@
                 }
 
 
-
                 echo "</div>";
                 echo "</div>";
                 echo "</div>\";";
@@ -128,6 +132,8 @@
 
                 echo "$marker.addListener('click', function(){\n";
                 echo "$info.open(map, $marker);\n";
+                echo "windowTambah.close();";
+                echo "windowError.close();";
 
                 /**
                  * untuk hapus toko
@@ -168,6 +174,7 @@
         function placeMarker(location) {
             var lat = location.lat();
             var long = location.lng();
+
             if (marker) {
                 marker.setPosition(location);
             } else {
@@ -176,9 +183,18 @@
                     map: map
                 });
             }
-            windowTambah.open(map, marker);
-            document.getElementById('Lat').value = lat;
-            document.getElementById("Long").value = long;
+            /**
+             * pengecekan lokasi diluar jember
+             */
+            if ((lat > -8.573912 && lat < -7.960998) && (long > 113.307343 && long < 113.962403)) {
+                windowError.close();
+                windowTambah.open(map, marker);
+                document.getElementById('Lat').value = lat;
+                document.getElementById("Long").value = long;
+            } else {
+                windowTambah.close();
+                windowError.open(map, marker);
+            }
         }
     }
 

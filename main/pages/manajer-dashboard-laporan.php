@@ -35,6 +35,7 @@
              * sorting
              * terjual / diterima * 100(%)
              */
+//            print_r($listKecamatan);
             $jum = count($listKecamatan);
             for ($i = 0; $i < ($jum - 1); $i++) {
                 for ($j = 0; $j < $jum - $i - 1; $j++) {
@@ -52,25 +53,31 @@
                     }
                 }
             }
-
-            echo "<div class='list-group'>";
+//            echo "<br>";
+//            print_r($listKecamatan);
+            echo "<ul class='list-group'>";
             foreach ($listKecamatan as $item) {
                 $warna = "";
+                $pesan = "";
                 $persen = ($item['Terjual'] / $item['Diterima']) * 100;
                 if ($persen > 80 && $persen <= 100) {   /*sangat berpotensi*/
                     $warna = "bg-green";
+                    $pesan = "Sangat Berpotensi";
                 } else if ($persen > 70 && $persen <= 80) {    /*potensial*/
                     $warna = "bg-green-active";
+                    $pesan = "Potensi";
                 } else if ($persen > 50 && $persen <= 70) {    /*kurang berpotensi*/
                     $warna = "bg-orange";
+                    $pesan = "Kurang Berpotensi";
                 } else if ($persen < 50) {    /*tidak potensial*/
                     $warna = "bg-red";
+                    $pesan = "Tidak Berpotensi";
                 }
                 $kec = $item['Kecamatan'];
                 $IDKec = $item['IDKecamatan'];
-                echo "<a class='list-group-item $warna' href='?controller=laporan&action=manajerLaporanGrafik&IDKecamatan=$IDKec'>$kec</a>";
+                echo "<li class='list-group-item $warna'><a class='$warna' href='?controller=laporan&action=manajerLaporanGrafik&IDKecamatan=$IDKec'>$kec</a> <p class='pull-right'>$pesan</p></li>";
             }
-            echo "</div>";
+            echo "</ul>";
 
         } else {
             echo "<div class=\"callout callout-warning\">";

@@ -31,7 +31,7 @@ class Penjualan
     public static function lihatProdukPerBulan($IDToko)
     {
         $db = DB::getInstance();
-        $req = $db->query("SELECT IDStok, 200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, 200ml_Terjual, 600ml_Terjual, 1500ml_Terjual, TanggalDiterima, TanggalTerjual, IDToko FROM stok WHERE YEAR(TanggalDiterima) = YEAR(NOW()) AND IDToko = $IDToko;");
+        $req = $db->query("SELECT IDStok, 200ml_Diterima, 600ml_Diterima, 1500ml_Diterima, 200ml_Terjual, 600ml_Terjual, 1500ml_Terjual, TanggalDiterima, TanggalTerjual, IDToko, MONTH(TanggalDiterima) as bulan FROM stok WHERE YEAR(TanggalDiterima) = YEAR(NOW()) AND IDToko = $IDToko;");
         foreach ($req as $item) {
             $hasil[] = array(
                 'IDStok' => $item['IDStok'],
@@ -43,10 +43,11 @@ class Penjualan
                 'Terjual1500' => $item['1500ml_Terjual'],
                 'TanggalDiterima' => $item['TanggalDiterima'],
                 'TanggalTerjual' => $item['TanggalTerjual'],
-                'IDToko' => $item['IDToko']
+                'IDToko' => $item['IDToko'],
+                'Bulan' => $item['bulan']
             );
-            return $hasil;
         }
+        return $hasil;
     }
 
     public static function lihatTokoPadaKec()

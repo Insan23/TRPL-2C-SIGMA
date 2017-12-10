@@ -15,6 +15,7 @@ class ControlLaporan {
         $kecamatan = Pemetaan::bacaSatuKecamatan($_GET['IDKecamatan']);
         $distribusiPerTahun = Laporan::terdistribusiPerTahun($_GET['IDKecamatan']);
         $terjualPerTahun = Laporan::terjualPerTahun($_GET['IDKecamatan']);
+        $daftarToko = Laporan::listToko($_GET['IDKecamatan']);
         require_once ('main/pages/manajer-dashboard-laporan_grafik.php');
     }
 

@@ -24,7 +24,7 @@
             <?php
             if (isset($kecamatan)) {
                 $namKecamatan = $kecamatan;
-                echo "Grafik Penjualan $namKecamatan";
+                echo "Grafik Penjualan Kecamatan $namKecamatan";
             } else {
                 echo "Grafik Penjualan";
             }
@@ -74,6 +74,39 @@
                     <button class='btn btn-flat bg-teal'>1500ml</button>\n
                     </div>\n</div>\n";
             echo "</div>\n";
+            echo "</div>\n";
+            if (isset($daftarToko)) {
+                echo "<div class='box box-success'>";
+                echo "<div class='box-header'>";
+                echo "<h3>Daftar Toko</h3>";
+                echo "</div>";
+                echo "<div class='box-body'>";
+                echo "<div class='list-group'>";
+                foreach ($daftarToko as $item) {
+                    $warna = "";
+                    $pesan = "";
+                    $persen = ($item['Terjual'] / $item['Diterima']) * 100;
+                    $persen = round($persen);
+                    if ($persen > 80 && $persen <= 100) {   /*sangat berpotensi*/
+                        $warna = "bg-green";
+                        $pesan = "Sangat Berpotensi";
+                    } else if ($persen > 70 && $persen <= 80) {    /*potensial*/
+                        $warna = "bg-green-active";
+                        $pesan = "Potensi";
+                    } else if ($persen > 50 && $persen <= 70) {    /*kurang berpotensi*/
+                        $warna = "bg-orange";
+                        $pesan = "Kurang Berpotensi";
+                    } else if ($persen < 50) {    /*tidak potensial*/
+                        $warna = "bg-red";
+                        $pesan = "Tidak Berpotensi";
+                    }
+                    $NamaToko = $item['NamaToko'];
+                    echo "<li class='list-group-item $warna'>$NamaToko <p class='pull-right'>$pesan (Penjualan $persen%)</p></li>";
+                }
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+            }
         } else {
             echo "<div class='box box-warning'>\n";
             echo "<div class='box-header'><h3>Tidak Ada Data</h3></div>\n";

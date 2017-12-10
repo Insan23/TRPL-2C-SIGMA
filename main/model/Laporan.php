@@ -26,7 +26,7 @@ class Laporan
             );
         }
         if (isset($hasil))
-        return $hasil;
+            return $hasil;
         else return null;
     }
 
@@ -55,6 +55,21 @@ class Laporan
                 'jual600' => $item['p600'],
                 'jual1500' => $item['p1500'],
                 'bulan' => $item['bulan']
+            );
+        }
+        return $hasil;
+    }
+
+    public static function listToko($IDKecamatan)
+    {
+        $db = DB::getInstance();
+        $req = $db->query("SELECT t.IDToko, t.NamaToko, (SUM(s.200ml_Diterima) + SUM(s.600ml_Diterima) + SUM(s.1500ml_Diterima)) as Diterima, (SUM(s.200ml_Terjual) + SUM(s.600ml_Terjual) + SUM(s.1500ml_Terjual)) as Terjual FROM toko t JOIN stok s ON t.IDToko = s.IDToko WHERE t.IDKecamatan = $IDKecamatan GROUP BY t.NamaToko;");
+        foreach ($req as $item) {
+            $hasil[] = array(
+                'IDToko' => $item['IDToko'],
+                'NamaToko' => $item['NamaToko'],
+                'Diterima' => $item['Diterima'],
+                'Terjual' => $item['Terjual']
             );
         }
         return $hasil;
