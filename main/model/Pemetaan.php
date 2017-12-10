@@ -104,6 +104,19 @@ class Pemetaan
         }
         return $hasil;
     }
+
+    public static function bacaSatuToko($ID) {
+        $db = DB::getInstance();
+        $req = $db->query("SELECT NamaToko FROM toko WHERE IDToko = $ID;");
+        foreach ($req as $item) {
+            $hasil = $item['NamaToko'];
+        }
+        return $hasil;
+    }
+
+    public static function bacaUpdateProduk() {
+
+    }
 }
 
 ?>

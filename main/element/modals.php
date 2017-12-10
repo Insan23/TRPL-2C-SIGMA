@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group">
                         <label for="NoTelp">Nomor Telepon</label>
-                        <input type="text" name="NoTelp" class="form-control" placeholder="08xxxx"
+                        <input type="number" name="NoTelp" class="form-control" placeholder="08xxxx"
                                id="NoTelp">
                     </div>
                     <div class="form-group">

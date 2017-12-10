@@ -21,6 +21,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
+            Penjualan Toko <?php if (isset($namaToko)) echo "$namaToko";?>
             <small></small>
         </h1>
         <ol class="breadcrumb">
@@ -31,6 +32,37 @@
     </section>
     <section class="content container-fluid">
         <!-- awal konten -->
+        <!-- drop down bulan-->
+        <div class="row">
+                <?php
+                if (isset($toko)) {
+                    echo "<div class='form-group'>";
+                    echo "<div class='col-md-1'>";
+                    echo "<label for='pilihBulan'>Bulan</label>";
+                    echo "</div>";
+                    echo "<div class='col-md-4'>";
+                    echo "<select name='Bulan' id='pilihBulan' class='form-control'>";
+                    echo "<option value='0'>Januari</option>";
+                    echo "<option value='1'>Februari</option>";
+                    echo "<option value='2'>Maret</option>";
+                    echo "<option value='3'>April</option>";
+                    echo "<option value='4'>Mei</option>";
+                    echo "<option value='5'>Juni</option>";
+                    echo "<option value='6'>Juli</option>";
+                    echo "<option value='7'>Agustus</option>";
+                    echo "<option value='8'>September</option>";
+                    echo "<option value='9'>Oktober</option>";
+                    echo "<option value='10'>November</option>";
+                    echo "<option value='11'>Desember</option>";
+                    echo "</select>";
+                    echo "</div>";
+                    echo "</div>";
+                } else {
+
+                }
+                ?>
+        </div>
+        <br>
         <?php
         echo "<div class='box box-default'>";
         echo "<div class='box-body'>";
@@ -52,9 +84,9 @@
                 echo "<tr><td>Produk</td><td>Barang Masuk</td><td>Tanggal Tambah</td><td>Barang Terjual</td><td>Tanggal Keluar</td><td>Sisa Produk</td></tr>";
                 echo "</thead>";
                 echo "<tbody>";
-                echo "<tr><td>200ml</td><td>$Diterima200</td><td>$Terima</td><td>$Terjual200</td><td>$Terjual</td><td>$sisa200</td></tr>";
-                echo "<tr><td>600ml</td><td>$Diterima600</td><td>$Terima</td><td>$Terjual600</td><td>$Terjual</td><td>$sisa600</td></tr>";
-                echo "<tr><td>1500ml</td><td>$Diterima1500</td><td>$Terima</td><td>$Terjual1500</td><td>$Terjual</td><td>$sisa1500</td></tr>";
+                echo "<tr><td>200ml</td><td></td><td></td><td></td><td></td><td></td></tr>";
+                echo "<tr><td>600ml</td><td></td><td></td><td></td><td></td><td></td></tr>";
+                echo "<tr><td>1500ml</td><td></td><td></td><td></td><td></td><td></td></tr>";
                 echo "</tbody>";
                 echo "</table>";
             }
@@ -69,6 +101,10 @@
         <?php require_once('main/element/modals.php'); ?>
 </div>
 <?php require_once('main/element/footer.php'); ?>
+<script>
+    <?php
 
+    ?>
+</script>
 </body>
 </html>

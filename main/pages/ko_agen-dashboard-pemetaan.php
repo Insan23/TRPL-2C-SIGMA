@@ -95,30 +95,32 @@
                 echo "map: map\n";
                 echo "});\n";
 
-                echo "var $konten = \"<div class='box box-info'>\"\n";
-                echo "<div class='box-header'>\n";
-                echo "<h3>Toko $NamaToko_</h3>\n";
-                echo "</div>\n";
-                echo "<div class='box-body'>\n";
-                echo "<p>Pemilik: $NamaPemilik_</p>\n";
-                echo "<p>No Telp: $NoTelp_</p>\n";
-                echo "<p>Alamat: $AlamatToko_</p>\n";
-                echo "<p>Kecamatan: $Kecamatan_</p>\n";
-                echo "</div>\n";
-                echo "<div class='box-footer'>\n";
-                echo "<div class='btn-group'>\n";
-                if () {
-
-                } else {
-
+                echo "var $konten = \"<div class='box box-info'>";
+                echo "<div class='box-header'>";
+                echo "<h3>Toko $NamaToko_</h3>";
+                echo "</div>";
+                echo "<div class='box-body'>";
+                echo "<p>Pemilik: $NamaPemilik_</p>";
+                echo "<p>No Telp: $NoTelp_</p>";
+                echo "<p>Alamat: $AlamatToko_</p>";
+                echo "<p>Kecamatan: $Kecamatan_</p>";
+                echo "</div>";
+                echo "<div class='box-footer'>";
+                echo "<div class='btn-group'>";
+                echo "<button type='button' class='btn btn-danger' data-toggle='modal' data-target='#modal-hapus-toko'>Hapus Toko</button>";
+                echo "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modal-ubah-toko'>Ubah Toko</button>";
+                if (date("d") >= 1 && date("d") <= 5) {
+                    echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-tambah-produk'>Tambah Produk</button>";
                 }
-                echo "<button type='button' class='btn btn-danger' data-toggle='modal' data-target='#modal-hapus-toko'>Hapus Toko</button>\n";
-                echo "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modal-ubah-toko'>Ubah Toko</button>\n";
-                echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-tambah-produk'>Tambah Produk</button>\n";
-                echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-update-produk'>Update Penjualan</button>\n";
-                echo "</div>\n";
-                echo "</div>\n";
-                echo "</div>\n";
+                if (date("d") >= 25 && date("d") <= 31) {
+                    echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal-update-produk'>Update Penjualan</button>";
+                }
+
+
+
+                echo "</div>";
+                echo "</div>";
+                echo "</div>\";";
 
                 echo "var $info = new google.maps.InfoWindow({\n";
                 echo "content: $konten\n";
@@ -148,8 +150,8 @@
                 /**
                  * untuk tambah & update produk
                  */
-                echo "document.getElementById('IDTokoUpdate').value= $ID_;";
-                echo "document.getElementById('IDTokoTambah').value= $ID_;";
+                echo "document.getElementById('IDTokoUpdate').value= $ID_;\n";
+                echo "document.getElementById('IDTokoTambah').value= $ID_;\n";
 
                 echo "});\n";
                 $i++;

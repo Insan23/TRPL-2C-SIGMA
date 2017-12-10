@@ -19,6 +19,7 @@
                 break;
             case 'penjualan':
                 require_once ('main/model/Penjualan.php');
+                require_once ('main/model/Pemetaan.php');
                 $controller = new ControlPenjualan();
                 break;
             case 'pemetaan':

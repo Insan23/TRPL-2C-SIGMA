@@ -83,6 +83,10 @@
         }
         ?>
 
+        <?php
+
+        ?>
+
 
         <!-- akhir konten -->
         <?php require_once('main/element/modals.php'); ?>

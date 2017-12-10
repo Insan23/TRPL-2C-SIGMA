@@ -96,13 +96,13 @@ class Profil
     public static function ubahDataAgen($NamaAgen, $JenisKelamin, $TanggalLahir, $Alamat, $NoTelp, $ID, $Username, $Password)
     {
         $db = DB::getInstance();
-        $db->query("UPDATE agen SET NamaAgen = '$NamaAgen', JenisKelamin = '$JenisKelamin', TanggalLahir = '$TanggalLahir', Alamat = '$Alamat', NoTelp = '$NoTelp'; WHERE IDAgen = $ID");
-        $IDLogin = $db->query("SELECT l.IDLogin FROM login l JOIN agen m ON l.IDLogin = m.IDLogin WHERE m.IDAgen = $ID");
-        $IDAgen;
-        foreach ($IDLogin as $item) {
-            $IDAgen = $item['IDLogin'];
-        }
-        $db->query("UPDATE login SET Username = '$Username', Password = '$Password' WHERE IDLogin = $IDAgen");
+        $db->query("UPDATE agen SET NamaAgen = '$NamaAgen', JenisKelamin = '$JenisKelamin', TanggalLahir = '$TanggalLahir', Alamat = '$Alamat', NoTelp = '$NoTelp' WHERE IDAgen = $ID;");
+        $db->query("UPDATE login SET Username = '$Username', Password = '$Password' WHERE IDLogin = (SELECT IDLogin FROM agen WHERE IDAgen = $ID)");
+//        $IDLogin = $db->query("SELECT l.IDLogin FROM login l JOIN agen m ON l.IDLogin = m.IDLogin WHERE m.IDAgen = $ID");
+//        $IDAgen;
+//        foreach ($IDLogin as $item) {
+//            $IDAgen = $item['IDLogin'];
+//        }
     }
 }
 
