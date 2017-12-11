@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e76e3720-503a-490a-9ab4-420d70aa7030" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/control/laporan.php" afterPath="$PROJECT_DIR$/main/control/laporan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/model/Laporan.php" afterPath="$PROJECT_DIR$/main/model/Laporan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/control/pemetaan.php" afterPath="$PROJECT_DIR$/main/control/pemetaan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/control/penjualan.php" afterPath="$PROJECT_DIR$/main/control/penjualan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/element/modals.php" afterPath="$PROJECT_DIR$/main/element/modals.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/model/Penjualan.php" afterPath="$PROJECT_DIR$/main/model/Penjualan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/pages/ko_agen-dashboard-pemetaan.php" afterPath="$PROJECT_DIR$/main/pages/ko_agen-dashboard-pemetaan.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php" afterPath="$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/pages/manajer-dashboard-laporan.php" afterPath="$PROJECT_DIR$/main/pages/manajer-dashboard-laporan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/pages/manajer-dashboard-laporan_grafik.php" afterPath="$PROJECT_DIR$/main/pages/manajer-dashboard-laporan_grafik.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,24 +18,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ko_agen-dashboard-pemetaan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-pemetaan.php">
+      <file leaf-file-name="modals.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/element/modals.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="128" column="39" lean-forward="false" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
+            <state relative-caret-position="16">
+              <caret line="465" column="31" lean-forward="true" selection-start-line="465" selection-start-column="31" selection-end-line="465" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ko_agen-dashboard-penjualan_toko.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
               <folding>
-                <marker date="1512924001744" expanded="true" signature="3186:3189" ph="..." />
-                <marker date="1512924001744" expanded="true" signature="3186:3210" ph="..." />
+                <marker date="1512358274560" expanded="true" signature="3749:3817" ph="..." />
+                <marker date="1512358274560" expanded="true" signature="3803:3817" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manajer-dashboard-laporan_grafik.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manajer-dashboard-laporan_grafik.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan_grafik.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="103" column="119" lean-forward="false" selection-start-line="103" selection-start-column="119" selection-end-line="103" selection-end-column="119" />
+            <state relative-caret-position="588">
+              <caret line="224" column="9" lean-forward="true" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="9" />
               <folding>
                 <element signature="e#12048#12268#0#PHP" expanded="false" />
                 <element signature="e#12917#16074#0#PHP" expanded="false" />
@@ -53,11 +61,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Laporan.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="manajer-dashboard-laporan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="65" column="72" lean-forward="false" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/model/Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <marker date="1512641100225" expanded="true" signature="266:400" ph="SELECT agen.... agen" />
+                <marker date="1512641100225" expanded="true" signature="777:922" ph="SELECT manaj... manajer" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Profil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/model/Profil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1328">
+              <caret line="88" column="94" lean-forward="false" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="94" />
+              <folding>
+                <marker date="1512914625335" expanded="true" signature="1166:1210" ph="SELECT IDKec... kecamatan" />
+                <marker date="1512914625335" expanded="true" signature="1520:1776" ph="SELECT k.IDA... agen" />
+                <marker date="1512914625335" expanded="true" signature="2506:2683" ph="SELECT m.IDM... manajer" />
+                <marker date="1512914625335" expanded="true" signature="3366:3483" ph="UPDATE manaj... " />
+                <marker date="1512914625335" expanded="true" signature="3526:3698" ph="UPDATE login... " />
+                <marker date="1512914625335" expanded="true" signature="3599:3687" ph="SELECT IDLog... login" />
+                <marker date="1512914625335" expanded="true" signature="3895:4037" ph="UPDATE agen " />
+                <marker date="1512914625335" expanded="true" signature="3895:4053" ph="UPDATE agen " />
+                <marker date="1512914625335" expanded="true" signature="4081:4161" ph="UPDATE login... " />
+                <marker date="1512914625335" expanded="true" signature="4081:4206" ph="UPDATE login... " />
+                <marker date="1512914625335" expanded="true" signature="4162:4202" ph="SELECT l.IDL... login" />
+                <marker date="1512914625335" expanded="true" signature="4243:4327" ph="SELECT l.IDL... login" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/model/Login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+              <folding>
+                <marker date="1512633976290" expanded="true" signature="266:335" ph="SELECT * FRO... login" />
+                <marker date="1512633976290" expanded="true" signature="993:1044" ph="SELECT usern... user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Laporan.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/model/Laporan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            <state relative-caret-position="396">
+              <caret line="65" column="70" lean-forward="false" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
               <folding>
                 <marker date="1512928943954" expanded="true" signature="261:604" ph="SELECT (SUM(... " />
                 <marker date="1512928943954" expanded="true" signature="1113:1248" ph="SELECT SUM(s... " />
@@ -69,38 +136,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="penjualan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/control/penjualan.php">
+      <file leaf-file-name="Pemetaan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/model/Pemetaan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Penjualan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/model/Penjualan.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="220" />
+            <state relative-caret-position="1664">
+              <caret line="109" column="72" lean-forward="true" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
               <folding>
-                <marker date="1512920456577" expanded="true" signature="294:441" ph="INSERT INTO stok... " />
-                <marker date="1512920456577" expanded="true" signature="472:619" ph="INSERT INTO stok... " />
-                <marker date="1512920456577" expanded="true" signature="814:984" ph="UPDATE stok " />
-                <marker date="1512920456577" expanded="true" signature="1145:1393" ph="SELECT IDSto... " />
-                <marker date="1512920456577" expanded="true" signature="2238:2371" ph="SELECT DISTI... kecamatan" />
-                <marker date="1512920456577" expanded="true" signature="2700:2893" ph="SELECT t.IDT... toko" />
+                <marker date="1512915764804" expanded="true" signature="258:626" ph="SELECT toko.... toko" />
+                <marker date="1512915764804" expanded="true" signature="1488:1714" ph="SELECT mapto... toko" />
+                <marker date="1512915764804" expanded="true" signature="2446:2654" ph="INSERT INTO toko... " />
+                <marker date="1512915764804" expanded="true" signature="2689:2770" ph="SELECT IDTok... toko" />
+                <marker date="1512915764804" expanded="true" signature="2897:2977" ph="INSERT INTO maptoko... " />
+                <marker date="1512915764804" expanded="true" signature="3199:3378" ph="UPDATE toko " />
+                <marker date="1512915764804" expanded="true" signature="3419:3495" ph="UPDATE mapto... " />
+                <marker date="1512915764804" expanded="true" signature="3615:3659" ph="SELECT IDKec... kecamatan" />
+                <marker date="1512915764804" expanded="true" signature="3978:4033" ph="UPDATE toko " />
+                <marker date="1512915764804" expanded="true" signature="4163:4200" ph="SELECT Kecam... kecamatan" />
+                <marker date="1512915764804" expanded="true" signature="4163:4204" ph="SELECT Kecam... kecamatan" />
+                <marker date="1512915764804" expanded="true" signature="4163:4215" ph="SELECT Kecam... kecamatan" />
+                <marker date="1512915764804" expanded="true" signature="4163:4216" ph="SELECT Kecam... kecamatan" />
+                <marker date="1512915764804" expanded="true" signature="4445:4452" ph="SELECT Kecam... kecamatan" />
+                <marker date="1512915764804" expanded="true" signature="4445:4485" ph="SELECT NamaT... toko" />
+                <marker date="1512915764804" expanded="true" signature="4445:4486" ph="SELECT NamaT... toko" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manajer-dashboard-laporan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan.php">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/control/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="77" column="197" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="77" selection-end-column="197" />
+            <state relative-caret-position="112">
+              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -110,7 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update pr</find>
       <find>IDTokoUbah</find>
       <find>print</find>
       <find>modal</find>
@@ -128,7 +194,6 @@
       <find>Tangg</find>
       <find>alama</find>
       <find>profi</find>
-      <find>ubah</find>
       <find>be</find>
       <find>penju</find>
       <find>laporan</find>
@@ -140,6 +205,8 @@
       <find>.value</find>
       <find>item['B</find>
       <find>lat</find>
+      <find>tambah toko</find>
+      <find>ubah</find>
     </findStrings>
     <replaceStrings>
       <replace>Nama User</replace>
@@ -234,7 +301,6 @@
         <option value="$PROJECT_DIR$/main/pages/manajer-profil.php" />
         <option value="$PROJECT_DIR$/main/dashboard-pemetaan.html" />
         <option value="$PROJECT_DIR$/main/model/Home.php" />
-        <option value="$PROJECT_DIR$/main/control/pemetaan.php" />
         <option value="$PROJECT_DIR$/main/pages/home.php" />
         <option value="$PROJECT_DIR$/main/pages/manajer-dashboard-penjualan_toko.php" />
         <option value="$PROJECT_DIR$/kumpulan query.txt" />
@@ -248,17 +314,18 @@
         <option value="$PROJECT_DIR$/main/pages/manajer-dashboard-pemetaan.php" />
         <option value="$PROJECT_DIR$/main/pages/ko_agen-profil.php" />
         <option value="$PROJECT_DIR$/main/model/Profil.php" />
-        <option value="$PROJECT_DIR$/main/element/modals.php" />
-        <option value="$PROJECT_DIR$/main/control/penjualan.php" />
         <option value="$PROJECT_DIR$/route.php" />
         <option value="$PROJECT_DIR$/main/model/Pemetaan.php" />
-        <option value="$PROJECT_DIR$/main/model/Penjualan.php" />
-        <option value="$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php" />
-        <option value="$PROJECT_DIR$/main/pages/ko_agen-dashboard-pemetaan.php" />
         <option value="$PROJECT_DIR$/main/control/laporan.php" />
         <option value="$PROJECT_DIR$/main/pages/manajer-dashboard-laporan.php" />
         <option value="$PROJECT_DIR$/main/model/Laporan.php" />
         <option value="$PROJECT_DIR$/main/pages/manajer-dashboard-laporan_grafik.php" />
+        <option value="$PROJECT_DIR$/main/control/pemetaan.php" />
+        <option value="$PROJECT_DIR$/main/pages/ko_agen-dashboard-pemetaan.php" />
+        <option value="$PROJECT_DIR$/main/control/penjualan.php" />
+        <option value="$PROJECT_DIR$/main/element/modals.php" />
+        <option value="$PROJECT_DIR$/main/model/Penjualan.php" />
+        <option value="$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php" />
       </list>
     </option>
   </component>
@@ -568,7 +635,8 @@
       <workItem from="1512799979036" duration="30773000" />
       <workItem from="1512835317791" duration="27029000" />
       <workItem from="1512911207752" duration="13634000" />
-      <workItem from="1512925212466" duration="3422000" />
+      <workItem from="1512925212466" duration="17801000" />
+      <workItem from="1512357395116" duration="2585000" />
     </task>
     <task id="LOCAL-00001" summary="lanjut">
       <created>1512641634206</created>
@@ -633,11 +701,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512917712086</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lanjutan">
+      <created>1512929357792</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1512929357793</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307015000" />
+    <option name="totallyTimeSpent" value="323979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,7 +727,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23426062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24450952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -747,24 +822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/user-info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="312" column="81" lean-forward="true" selection-start-line="312" selection-start-column="81" selection-end-line="312" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -775,24 +836,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/element/sidebar-manajer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -810,13 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/manajer-profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="91" column="32" lean-forward="false" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/dashboard-pemetaan.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -828,24 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/model/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1512641100225" expanded="true" signature="777:922" ph="SELECT manaj... manajer" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/element/sidebar-ko_agen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,20 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-penjualan_toko.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kumpulan query.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="23" column="305" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="305" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/element/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -906,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="6" column="81823" lean-forward="true" selection-start-line="6" selection-start-column="81817" selection-end-line="6" selection-end-column="81823" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -914,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="4492" column="27" lean-forward="true" selection-start-line="4492" selection-start-column="21" selection-end-line="4492" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,56 +931,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-penjualan.php">
+    <entry file="file://$PROJECT_DIR$/route.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="224">
+          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan_rekomendasi.php">
+    <entry file="file://$PROJECT_DIR$/function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="208">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/control/home.php">
+    <entry file="file://$PROJECT_DIR$/kumpulan query.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="359">
+          <caret line="23" column="305" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="305" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/control/laporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1603">
-          <caret line="137" column="50" lean-forward="false" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-pemetaan.php">
+    <entry file="file://$PROJECT_DIR$/main/control/pemetaan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
-          <caret line="103" column="76" lean-forward="true" selection-start-line="103" selection-start-column="76" selection-end-line="103" selection-end-column="76" />
+          <caret line="59" column="23" lean-forward="true" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/model/Penjualan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1146">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <marker date="1512936716731" expanded="true" signature="294:441" ph="INSERT INTO stok... " />
+            <marker date="1512936716731" expanded="true" signature="472:619" ph="INSERT INTO stok... " />
+            <marker date="1512936716731" expanded="true" signature="814:984" ph="UPDATE stok " />
+            <marker date="1512936716731" expanded="true" signature="1145:1393" ph="SELECT IDSto... " />
+            <marker date="1512936716731" expanded="true" signature="2283:2416" ph="SELECT DISTI... kecamatan" />
+            <marker date="1512936716731" expanded="true" signature="2745:2938" ph="SELECT t.IDT... toko" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -986,10 +998,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/control/penjualan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="47" column="2" lean-forward="true" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-pemetaan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2741">
+          <caret line="203" column="9" lean-forward="false" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
+          <folding>
+            <marker date="1512935072337" expanded="true" signature="3186:3189" ph="..." />
+            <marker date="1512935072337" expanded="true" signature="3186:3210" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1199">
+          <caret line="131" column="61" lean-forward="true" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan_rekomendasi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-pemetaan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1597">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-penjualan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-penjualan_toko.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/manajer-profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1376">
+          <caret line="91" column="32" lean-forward="false" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/element/sidebar-ko_agen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/model/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1512641100225" expanded="true" signature="266:400" ph="SELECT agen.... agen" />
+            <marker date="1512641100225" expanded="true" signature="777:922" ph="SELECT manaj... manajer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/model/Profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1328">
+          <caret line="88" column="94" lean-forward="false" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="94" />
+          <folding>
+            <marker date="1512914625335" expanded="true" signature="1166:1210" ph="SELECT IDKec... kecamatan" />
+            <marker date="1512914625335" expanded="true" signature="1520:1776" ph="SELECT k.IDA... agen" />
+            <marker date="1512914625335" expanded="true" signature="2506:2683" ph="SELECT m.IDM... manajer" />
+            <marker date="1512914625335" expanded="true" signature="3366:3483" ph="UPDATE manaj... " />
+            <marker date="1512914625335" expanded="true" signature="3526:3698" ph="UPDATE login... " />
+            <marker date="1512914625335" expanded="true" signature="3599:3687" ph="SELECT IDLog... login" />
+            <marker date="1512914625335" expanded="true" signature="3895:4037" ph="UPDATE agen " />
+            <marker date="1512914625335" expanded="true" signature="3895:4053" ph="UPDATE agen " />
+            <marker date="1512914625335" expanded="true" signature="4081:4161" ph="UPDATE login... " />
+            <marker date="1512914625335" expanded="true" signature="4081:4206" ph="UPDATE login... " />
+            <marker date="1512914625335" expanded="true" signature="4162:4202" ph="SELECT l.IDL... login" />
+            <marker date="1512914625335" expanded="true" signature="4243:4327" ph="SELECT l.IDL... login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/model/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding>
             <marker date="1512633976290" expanded="true" signature="266:335" ph="SELECT * FRO... login" />
             <marker date="1512633976290" expanded="true" signature="993:1044" ph="SELECT usern... user" />
@@ -997,16 +1145,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/model/Pemetaan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="1664">
           <caret line="109" column="72" lean-forward="true" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
           <folding>
             <marker date="1512915764804" expanded="true" signature="258:626" ph="SELECT toko.... toko" />
@@ -1029,108 +1170,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="84" column="21" lean-forward="true" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-          <folding>
-            <element signature="e#3900#43975#0#PHP" expanded="false" />
-            <element signature="e#4116#7370#0#PHP" expanded="false" />
-            <element signature="e#7438#10692#0#PHP" expanded="false" />
-            <element signature="e#10760#14014#0#PHP" expanded="false" />
-            <element signature="e#14082#17336#0#PHP" expanded="false" />
-            <element signature="e#17404#20658#0#PHP" expanded="false" />
-            <element signature="e#20726#23980#0#PHP" expanded="false" />
-            <element signature="e#24048#27302#0#PHP" expanded="false" />
-            <element signature="e#27370#30624#0#PHP" expanded="false" />
-            <element signature="e#30692#33946#0#PHP" expanded="false" />
-            <element signature="e#34015#37270#0#PHP" expanded="false" />
-            <element signature="e#37339#40594#0#PHP" expanded="false" />
-            <element signature="e#40663#43918#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/model/Profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-          <folding>
-            <marker date="1512914625335" expanded="true" signature="1166:1210" ph="SELECT IDKec... kecamatan" />
-            <marker date="1512914625335" expanded="true" signature="1520:1776" ph="SELECT k.IDA... agen" />
-            <marker date="1512914625335" expanded="true" signature="2506:2683" ph="SELECT m.IDM... manajer" />
-            <marker date="1512914625335" expanded="true" signature="3366:3483" ph="UPDATE manaj... " />
-            <marker date="1512914625335" expanded="true" signature="3526:3698" ph="UPDATE login... " />
-            <marker date="1512914625335" expanded="true" signature="3599:3687" ph="SELECT IDLog... login" />
-            <marker date="1512914625335" expanded="true" signature="3895:4037" ph="UPDATE agen " />
-            <marker date="1512914625335" expanded="true" signature="3895:4053" ph="UPDATE agen " />
-            <marker date="1512914625335" expanded="true" signature="4081:4161" ph="UPDATE login... " />
-            <marker date="1512914625335" expanded="true" signature="4081:4206" ph="UPDATE login... " />
-            <marker date="1512914625335" expanded="true" signature="4162:4202" ph="SELECT l.IDL... login" />
-            <marker date="1512914625335" expanded="true" signature="4243:4327" ph="SELECT l.IDL... login" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/control/pemetaan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/element/modals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3338">
-          <caret line="210" column="47" lean-forward="false" selection-start-line="210" selection-start-column="44" selection-end-line="210" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-pemetaan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="128" column="39" lean-forward="false" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
-          <folding>
-            <marker date="1512924001744" expanded="true" signature="3186:3189" ph="..." />
-            <marker date="1512924001744" expanded="true" signature="3186:3210" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/control/laporan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="77" column="197" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="77" selection-end-column="197" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/model/Penjualan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="220" />
-          <folding>
-            <marker date="1512920456577" expanded="true" signature="294:441" ph="INSERT INTO stok... " />
-            <marker date="1512920456577" expanded="true" signature="472:619" ph="INSERT INTO stok... " />
-            <marker date="1512920456577" expanded="true" signature="814:984" ph="UPDATE stok " />
-            <marker date="1512920456577" expanded="true" signature="1145:1393" ph="SELECT IDSto... " />
-            <marker date="1512920456577" expanded="true" signature="2238:2371" ph="SELECT DISTI... kecamatan" />
-            <marker date="1512920456577" expanded="true" signature="2700:2893" ph="SELECT t.IDT... toko" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/control/penjualan.php">
+    <entry file="file://$PROJECT_DIR$/main/control/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
@@ -1138,24 +1178,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/model/Laporan.php">
+    <entry file="file://$PROJECT_DIR$/main/element/modals.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+        <state relative-caret-position="16">
+          <caret line="465" column="31" lean-forward="true" selection-start-line="465" selection-start-column="31" selection-end-line="465" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
           <folding>
-            <marker date="1512928943954" expanded="true" signature="261:604" ph="SELECT (SUM(... " />
-            <marker date="1512928943954" expanded="true" signature="1113:1248" ph="SELECT SUM(s... " />
-            <marker date="1512928943954" expanded="true" signature="1113:1362" ph="SELECT SUM(s... " />
-            <marker date="1512928943954" expanded="true" signature="1781:2027" ph="SELECT COUNT... " />
-            <marker date="1512928943954" expanded="true" signature="2444:2741" ph="SELECT t.IDT... " />
+            <marker date="1512358274560" expanded="true" signature="3749:3817" ph="..." />
+            <marker date="1512358274560" expanded="true" signature="3803:3817" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan_grafik.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="103" column="119" lean-forward="false" selection-start-line="103" selection-start-column="119" selection-end-line="103" selection-end-column="119" />
+        <state relative-caret-position="588">
+          <caret line="224" column="9" lean-forward="true" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="9" />
           <folding>
             <element signature="e#12048#12268#0#PHP" expanded="false" />
             <element signature="e#12917#16074#0#PHP" expanded="false" />
@@ -1166,6 +1211,28 @@
             <marker date="1512929313034" expanded="true" signature="2468:2753" ph="..." />
             <marker date="1512929313034" expanded="true" signature="2491:2745" ph="..." />
             <marker date="1512929313034" expanded="true" signature="18828:18871" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/pages/manajer-dashboard-laporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="65" column="72" lean-forward="false" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/model/Laporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="65" column="70" lean-forward="false" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+          <folding>
+            <marker date="1512928943954" expanded="true" signature="261:604" ph="SELECT (SUM(... " />
+            <marker date="1512928943954" expanded="true" signature="1113:1248" ph="SELECT SUM(s... " />
+            <marker date="1512928943954" expanded="true" signature="1113:1362" ph="SELECT SUM(s... " />
+            <marker date="1512928943954" expanded="true" signature="1781:2027" ph="SELECT COUNT... " />
+            <marker date="1512928943954" expanded="true" signature="2444:2741" ph="SELECT t.IDT... " />
           </folding>
         </state>
       </provider>

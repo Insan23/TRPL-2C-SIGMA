@@ -16,6 +16,7 @@ class ControlPenjualan {
 
     public function koAgenPenjualanToko() {
         $toko = Penjualan::lihatProdukPerBulan($_GET['IDToko']);
+        $IDToko = $_GET['IDToko'];
         $namaToko = Pemetaan::bacaSatuToko($_GET['IDToko']);
         require_once ('main/pages/ko_agen-dashboard-penjualan_toko.php');
     }

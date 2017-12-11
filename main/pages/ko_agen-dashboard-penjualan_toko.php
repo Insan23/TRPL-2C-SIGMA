@@ -80,22 +80,20 @@
         } else {
             echo "<div class='box-header'>Tidak Ada Data</div>\n</div>\n";
         }
-        echo "</div>\n<div class='box-footer'>\n";
-        echo "<div class='btn-group'>";
-        echo "<button></button>";
-        echo "</div>\n</div>\n";
+        echo "</div>";
         ?>
         <!--akhir kontent-->
         <?php require_once('main/element/modals.php'); ?>
 </div>
 <?php require_once('main/element/footer.php'); ?>
 <script>
+    var bulan = -1;
     <?php
     if (isset($toko)) {
         echo "function gantiBulan(){\n";
         echo "var bulan = document.getElementById('pilihBulan').value;\n";
-        echo "console.log(bulan);\n";
         echo "if (bulan == 1) {";
+        echo "bulan = 1;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 1) {
                 $Diterima200 = $item['Diterima200'];
@@ -144,6 +142,7 @@
         }
         echo "}";
         echo "else if (bulan == 2) {\n";
+        echo "bulan = 2;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 2) {
                 $Diterima200 = $item['Diterima200'];
@@ -192,6 +191,7 @@
         }
         echo "}";
         echo "else if (bulan == 3) {\n";
+        echo "bulan = 3;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 3) {
                 $Diterima200 = $item['Diterima200'];
@@ -240,6 +240,7 @@
         }
         echo "}";
         echo "else if (bulan == 4) {\n";
+        echo "bulan = 4;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 4) {
                 $Diterima200 = $item['Diterima200'];
@@ -288,6 +289,7 @@
         }
         echo "}";
         echo "else if (bulan == 5) {\n";
+        echo "bulan = 5;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 5) {
                 $Diterima200 = $item['Diterima200'];
@@ -336,6 +338,7 @@
         }
         echo "}";
         echo "else if (bulan == 6) {\n";
+        echo "bulan = 6;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 6) {
                 $Diterima200 = $item['Diterima200'];
@@ -384,6 +387,7 @@
         }
         echo "}";
         echo "else if (bulan == 7) {\n";
+        echo "bulan = 7;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 7) {
                 $Diterima200 = $item['Diterima200'];
@@ -432,6 +436,7 @@
         }
         echo "}";
         echo "else if (bulan == 8) {\n";
+        echo "bulan = 8;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 8) {
                 $Diterima200 = $item['Diterima200'];
@@ -480,6 +485,7 @@
         }
         echo "}";
         echo "else if (bulan == 9) {\n";
+        echo "bulan = 9;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 9) {
                 $Diterima200 = $item['Diterima200'];
@@ -528,6 +534,7 @@
         }
         echo "}";
         echo "else if (bulan == 10) {\n";
+        echo "bulan = 10;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 10) {
                 $Diterima200 = $item['Diterima200'];
@@ -576,6 +583,7 @@
         }
         echo "}";
         echo "else if (bulan == 11) {\n";
+        echo "bulan = 11;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 11) {
                 $Diterima200 = $item['Diterima200'];
@@ -624,6 +632,7 @@
         }
         echo "}";
         echo "else if (bulan == 12) {\n";
+        echo "bulan = 12;\n";
         foreach ($toko as $item) {
             if ($item['Bulan'] == 12) {
                 $Diterima200 = $item['Diterima200'];

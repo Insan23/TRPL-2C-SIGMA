@@ -44,8 +44,11 @@ class ControlPemetaan
         $_SESSION['ID'] = "";
         $_GET['Lat'] = "";
         $_GET['Long'] = "";
-//        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
-        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
+
+        $peta = Pemetaan::bacaPinToko();
+        $kecamatan = Pemetaan::dataKecamatan();
+        require_once('main/pages/ko_agen-dashboard-pemetaan.php');
+//        header("location: index.php?controller=pemetaan&action=koAgenPemetaan");
     }
 
     public function ubahToko()

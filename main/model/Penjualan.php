@@ -47,7 +47,8 @@ class Penjualan
                 'Bulan' => $item['bulan']
             );
         }
-        return $hasil;
+        if (isset($hasil)) return $hasil;
+        else return null;
     }
 
     public static function lihatTokoPadaKec()
