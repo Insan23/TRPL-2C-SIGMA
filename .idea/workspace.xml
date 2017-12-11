@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e76e3720-503a-490a-9ab4-420d70aa7030" name="Default" comment="">
+    <list default="true" id="e76e3720-503a-490a-9ab4-420d70aa7030" name="Default" comment="lanjutan">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/control/pemetaan.php" afterPath="$PROJECT_DIR$/main/control/pemetaan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/control/penjualan.php" afterPath="$PROJECT_DIR$/main/control/penjualan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/element/modals.php" afterPath="$PROJECT_DIR$/main/element/modals.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/model/Penjualan.php" afterPath="$PROJECT_DIR$/main/model/Penjualan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php" afterPath="$PROJECT_DIR$/main/pages/ko_agen-dashboard-penjualan_toko.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,8 +118,8 @@
       <file leaf-file-name="Laporan.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/model/Laporan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="65" column="70" lean-forward="false" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+            <state relative-caret-position="268">
+              <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
               <folding>
                 <marker date="1512928943954" expanded="true" signature="261:604" ph="SELECT (SUM(... " />
                 <marker date="1512928943954" expanded="true" signature="1113:1248" ph="SELECT SUM(s... " />
@@ -636,7 +631,7 @@
       <workItem from="1512835317791" duration="27029000" />
       <workItem from="1512911207752" duration="13634000" />
       <workItem from="1512925212466" duration="17801000" />
-      <workItem from="1512357395116" duration="2585000" />
+      <workItem from="1512357395116" duration="3291000" />
     </task>
     <task id="LOCAL-00001" summary="lanjut">
       <created>1512641634206</created>
@@ -708,11 +703,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512929357793</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="lanjutan">
+      <created>1512973768189</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1512973768193</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323979000" />
+    <option name="totallyTimeSpent" value="324685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1225,8 +1227,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/model/Laporan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="65" column="70" lean-forward="false" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+        <state relative-caret-position="268">
+          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
           <folding>
             <marker date="1512928943954" expanded="true" signature="261:604" ph="SELECT (SUM(... " />
             <marker date="1512928943954" expanded="true" signature="1113:1248" ph="SELECT SUM(s... " />
