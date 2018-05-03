@@ -126,7 +126,7 @@
 </div>
 <?php require_once('main/element/footer.php'); ?>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb9WDbufMGSEGz5PGq8T4DHPqa08lP-hc&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=_USE_YOUR_OWN_API_KEY&callback=initMap">
 </script>
 </body>
 </html>
